@@ -1,27 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <!-- <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
+  <NavBar/>
+  <FirstArea/>
+  <SecondArea/>
+  <ThirdArea/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import HelloWorld from './components/HelloWorld.vue';
+import NavBar from './components/NavBar.vue';
+import FirstArea from './components/FirstArea.vue'
+import SecondArea from './components/SecondArea.vue'
+import ThirdArea from './components/ThirdArea.vue'
 
 @Options({
   components: {
     HelloWorld,
+    NavBar,
+    FirstArea,
+    SecondArea,
+    ThirdArea
   },
 })
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: #fff;
+}
+body {
+  background-color: #252525;
+  padding: 0 170px 0 400px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
