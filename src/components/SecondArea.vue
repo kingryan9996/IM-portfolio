@@ -17,32 +17,38 @@
 
 <script>
 export default {
+    mounted() {
+        const h2Padding = ( document.querySelectorAll(".second-right-items > li")[0].clientHeight / 100 ) * 68.5
+        document.querySelector(".left-wrap").style["padding-bottom"] = `${h2Padding}px`;
+        console.log(h2Padding)
+        console.log(document.querySelector(".left-wrap > h2"))
 
+    }
 }
 </script>
 
 <style lang="scss">
 .second-area-wrap {
-    margin: 10vh 0 20vh;
+    margin-bottom: 25%;
     display: flex;
-    height: 100vh;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    
     .second-left {
         width: 40%;
         .left-wrap {
-            position: relative;
-            height: 3vw;
+            position: sticky;
+            top:50%;
+            z-index: 5;            
             h2 {
+            width: 120%;
             position: absolute;
-            top: 0;
             left: 0;
             font-size: 3vw;
-            display: block;
-            width: 1000px;
+            display: block;            
             text-align: left;
-        }
+            transform: translateY(-75%);
+            }
         }        
     }
     .second-right {
@@ -53,10 +59,13 @@ export default {
         align-items: center;
         .second-right-items {
             width: 100%;
-            li {                
+            transform: translateY(-5%);
+            li {   
+                position: sticky;
+                top:30%;
                 img {
                     width: 100%;
-                    height: 300px;
+                    box-shadow: 0 0 30px rgba(0,0,0,0.4);
                 }
             }
         }
