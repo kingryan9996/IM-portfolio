@@ -1,16 +1,18 @@
 <template>
   <article class="navbar-wrap">
-    <div class="first-line"><h2>ISH</h2></div>
+    <div class="first-line">
+        <h2 class="logo" @click="secNavigator(0)">ISH</h2>
+    </div>
     <div class="second-line">
-        <ul>
-            <li>WORK</li>
-            <li>ABOUT</li>
-            <li>SKILL</li>
+        <ul class="hamburger">
+            <li v-for="(list,index) in hamburger" :key="index" :class="list" @click="secNavigator(index)">{{list}}</li>
+            <!-- <li class="title">TITLE</li>
+            <li class="about">ABOUT</li>
+            <li class="work">WORK</li> -->
         </ul>
     </div>
     <div class="third-line">
-        <ul>
-            
+        <ul>            
             <li>서울시 관악구</li>
             <li>kingryan9996@gmail.com</li>
             <li class="sns-link">
@@ -27,30 +29,30 @@
 export default {
     mounted() {
         const sectionList = document.querySelectorAll(".second-line > ul > li")
-
         const firstSec = document.querySelector(".first-area-wrap")
-        const secondSec = document.querySelector(".second-area-wrap")
         const thirdSec = document.querySelector(".third-area-wrap")
+        const secondSec = document.querySelector(".second-area-wrap")
         
-        console.log(firstSec.clientHeight,'?????')
-        console.log(firstSec.offsetTop,'?????')
-        console.log(secondSec.clientHeight,'?????')
-        console.log(secondSec.offsetTop,'?????')
-        console.log(thirdSec.clientHeight,'?????')
-        console.log(thirdSec.offsetTop,'?????')
-            document.addEventListener('scroll',()=>{
+        // console.log(firstSec.clientHeight,'?????')
+        // console.log(firstSec.offsetTop,'?????')
+        // console.log(secondSec.clientHeight,'?????')
+        // console.log(secondSec.offsetTop,'?????')
+        // console.log(thirdSec.clientHeight,'?????')
+        // console.log(thirdSec.offsetTop,'?????')
+
+                document.addEventListener('scroll',()=>{
                 // console.log(window.innerHeight)
                 if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight ){
                     // sectionList[0].classList.add("active")
                     classRemove(0)
                 } else if ( window.pageYOffset >= firstSec.clientHeight && window.pageYOffset < ( firstSec.clientHeight + secondSec.clientHeight ) ){
-                    console.log('2층')
                     classRemove(1)
                 } else if ( window.pageYOffset >=( firstSec.clientHeight + secondSec.clientHeight ) && secondSec.clientHeight + thirdSec.clientHeight ){
                     classRemove(2)
                 }
             }
         )
+
 
         const classRemove = (num) => {
             sectionList.forEach((e,index)=> {
@@ -60,7 +62,31 @@ export default {
             }
             })
         }
-    }
+
+       
+    },
+    data() {
+        return {
+        hamburger: ["title","about","work"]
+        }
+    },
+    methods: {
+         secNavigator: function (index) {
+            
+            // console.log(hamburger,'?')
+            // console.log(index)
+
+            // console.log(hamburger[item].offsetTop)
+            const secY = document.querySelectorAll("article")
+            // console.log(secY[index+1].offsetTop + ( (secY[index+1].offsetTop) / 2 ))
+
+            window.scrollTo({
+                top: secY[index+1].offsetTop - ( (150) * index ),
+                left: 0,
+                behavior: 'smooth'
+    });
+        }
+    },
 }
 </script>
 
@@ -93,14 +119,22 @@ export default {
         }
         h2 {
             font-size: 2rem;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
     .second-line {
-        ul {
+        .hamburger {
             li {
+                font-size: 16px;
                 position: relative;
                 text-align: left;
+                text-transform: uppercase;
                 &.active{color:#F53D44}
+                &:hover{
+                    cursor: pointer;
+                }
             }
             li:nth-child(2) {
                 margin: 50% 0;
@@ -126,7 +160,7 @@ export default {
                 }
             }
         }
-    }
+    }    
     .third-line {
         ul {
             li {
@@ -150,6 +184,6 @@ export default {
                 }
             }
         }
-    }
+    }    
 }
 </style>

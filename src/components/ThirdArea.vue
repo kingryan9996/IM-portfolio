@@ -1,119 +1,107 @@
 <template>
   <article class="third-area-wrap">
     <div class="third-left">
-        <figure>
-            <img src="@/assets/img/profile.jpg">
-            <figcaption>전자 사인 자리</figcaption>
-        </figure>
+        <div class="left-wrap">
+            <h2>WORK ABOUT SKILL</h2>
+        </div>
     </div>
     <div class="third-right">
-        <h2>ABOUT ME</h2>
-        <h3>SKILL</h3>
-        <ul class="third-right-items basic">
-            <li class="html"><img src="@/assets/skill-svg/html-5.svg"></li>
-            <li class="css"><img src="@/assets/skill-svg/css3.svg"></li>
-            <li class="javascript"><img src="@/assets/skill-svg/javascript.svg"></li>
-            <li class="git"><img src="@/assets/skill-svg/github.svg"></li>
+        <ul class="third-right-items">
+            <li><img src="https://i.pinimg.com/564x/c1/d2/eb/c1d2ebf48a6367de7e7453f5befd3e2f.jpg"></li>
+            <li><img src="https://i.pinimg.com/564x/56/15/dd/5615dde0afe82cd720b1a7d85d233d9d.jpg"></li>
+            <li><img src="https://i.namu.wiki/i/czsnXEycUIHHMNiwukY5hamUqk3ry6J7iB1EiB0J-3VW2WjmuAJzlkipi0clu8kSGxzCX-T1UsBmotSbhzMC4I-9wrJcmNX78OzV6tQYWV30f-kYN8ArBxLEtUuQgR5vLuLbIn3b4To_9zlKpa5F0A.webp"></li>
         </ul>
-        <ul class="third-right-items framework">
-            <li class="typescript"><figure><img src="@/assets/skill-svg/typescript.svg"><figcaption>기존에 작업하였던 자바스크립트 프로젝트들을 타입스크립트를 활용해 리펙토링 할 수 있습니다.</figcaption></figure></li>
-            <li class="react"><figure><img src="@/assets/skill-svg/react.svg"><figcaption>코드의 역할에 따라 컴포넌트를 분리하여 작업할 수 있고 Axios와 React-Query를 사용해 API호출과 상태관리를 할 수 있습니다.</figcaption></figure></li>
-            <li class="next"><figure><img src="@/assets/skill-svg/next.svg"><figcaption>기존 CSR방식이 아닌 SEO에 최적화 된 SSR방식의 렌더링을 지원하며, 보다 정적인 사이트인 경우 SSG를 이용해 화면을 제공해줄 수 있습니다.</figcaption></figure></li>
-            <li class="vue"><figure><img src="@/assets/skill-svg/vue.svg"><figcaption>기존에 작업하였던 자바스크립트 프로젝트들을 타입스크립트를 활용해 리펙토링 할 수 있습니다.</figcaption></figure></li>
-        </ul>
-        <h3>FAQ</h3>
-        <ul>
-            <li>질문 01 : </li>
-            <li>질문 01 : </li>
-            <li>질문 01 : </li>
-        </ul>
-
     </div>
   </article>
 </template>
 
 <script>
 export default {
+    mounted() {
 
+        const workList = document.querySelectorAll(".third-right-items > li")
+
+        document.querySelector(".left-wrap").style["padding-bottom"] = `${ (workList[1].clientHeight / 100 ) * 60 }px`;
+
+        console.log(workList)
+
+        console.log(document.querySelector(".left-wrap > h2"))
+
+
+        document.addEventListener('scroll',()=>{
+                // console.log(window.innerHeight)
+                if ( window.pageYOffset > workList[0].clientHeight ){
+                    // sectionList[0].classList.add("active")
+                    console.log("첫번째 작품")
+                } 
+                // else if ( window.pageYOffset >= firstSec.clientHeight && window.pageYOffset < ( firstSec.clientHeight + secondSec.clientHeight ) ){
+                //     classRemove(1)
+                // } else if ( window.pageYOffset >=( firstSec.clientHeight + secondSec.clientHeight ) && secondSec.clientHeight + thirdSec.clientHeight ){
+                //     classRemove(2)
+                // }
+            }
+        )
+
+        // const classRemove = (num) => {
+        //     sectionList.forEach((e,index)=> {
+        //     if (index!=num ) { e.classList.remove("active")
+        //     } else if ( index==num && e.className != "active" ) {
+        //         e.classList.add("active")
+        //     }
+        //     })
+        // }
+        
+
+
+
+
+    }
 }
 </script>
 
 <style lang="scss">
 .third-area-wrap {
+    margin-bottom: 25%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 10%;
+    
     .third-left {
         width: 40%;
-        position:sticky;
-        top:0;
-        figure {
-            img {
-                width: 100%;
+        .left-wrap {
+            position: sticky;
+            top:50%;
+            z-index: 5;            
+            h2 {
+            width: 120%;
+            position: absolute;
+            left: 0;
+            font-size: 3vw;
+            display: block;            
+            text-align: left;
+            transform: translateY(-75%);
             }
-        }
+        }        
     }
     .third-right {
         width: 60%;
-        padding: 5%;
-        h2 {
-            font-size: 3vw;
-            margin-bottom: 2vw;
-        }
-        h3 {
-            font-size: 2vw;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .third-right-items {
-            li {
+            width: 100%;
+            transform: translateY(-5%);
+            li {   
+                position: sticky;
+                top:30%;
                 img {
-                    width: 40px;
-                }
-            }
-        }
-        .basic {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            margin: 25px 0 5px;
-            li {
-                img {
-                    width: 50px;
-                }                
-            }
-            .javascript {
-                display: flex;                
-                flex-wrap: wrap;
-                justify-content: center;
-                align-content: center;
-                    img {
-                        width: 40px;
-                    }
-                }
-        }
-        .framework {
-            margin-bottom: 30px;
-            li {
-                figure {
-                    display: flex;
-                    margin: 10px 0;
-                    img {
-                        margin-right: 10px;
-                    }
-                    figcaption {
-                        text-align: left;
-                        font-size: 16px;
-                    }
-                }
-            }
-            .vue {
-                img {
-                    scale: 1.7;
+                    width: 100%;
+                    height: 530px;
+                    box-shadow: 0 0 30px rgba(0,0,0,0.4);
                 }
             }
         }
     }
 }
-
 </style>

@@ -3,7 +3,7 @@
   <MyCanvas/>
   <h1>
     <div class="svg-path">
-      <svg width="445" height="142.401" viewBox="0 0 445 142.401" xmlns="http://www.w3.org/2000/svg">
+      <svg class="svg-front" width="445" height="142.401" viewBox="0 0 445 142.401" xmlns="http://www.w3.org/2000/svg">
         <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#FFF" stroke-width="0.25mm" fill="none" style="stroke:#FFF;stroke-width:0.25mm;fill:none">
           <path d="M 25.6 139.4 L 0 139.4 L 0 0 L 72.8 0 L 72.8 22 L 25.6 22 L 25.6 58.6 L 66.8 58.6 L 66.8 81 L 25.6 81 L 25.6 139.4 Z" id="0" vector-effect="non-scaling-stroke"/>
           <path d="M 114.8 139.4 L 89.8 139.4 L 89.8 39.8 L 112.4 39.8 L 113.6 57.4 Q 114.975 54.048 117.642 50.328 A 53.091 53.091 0 0 1 118.55 49.1 A 23.796 23.796 0 0 1 123.368 44.407 A 32.175 32.175 0 0 1 127.85 41.65 A 25.152 25.152 0 0 1 133.658 39.578 Q 137.876 38.6 143.2 38.6 A 35.772 35.772 0 0 1 145.604 38.677 Q 146.789 38.757 147.828 38.92 A 20.134 20.134 0 0 1 148.3 39 A 20.068 20.068 0 0 1 151.554 39.869 A 17.884 17.884 0 0 1 152.4 40.2 L 146.8 66.4 Q 144.264 63.864 139.593 63.338 A 23.188 23.188 0 0 0 137 63.2 A 30.856 30.856 0 0 0 131.671 63.634 Q 127.482 64.369 124.4 66.35 A 28.241 28.241 0 0 0 120.84 69.033 Q 118.975 70.7 117.705 72.541 A 16.556 16.556 0 0 0 117.15 73.4 Q 115.342 76.4 114.925 78.335 A 5.085 5.085 0 0 0 114.8 79.4 L 114.8 139.4 Z" id="1" vector-effect="non-scaling-stroke"/>
@@ -52,12 +52,47 @@ export default {
     
   let paths = document.querySelectorAll(".first-area-wrap path");
   let texts = document.querySelectorAll('text')
+  let frontPath = document.querySelector(".svg-front")
+  let AndSvg = document.querySelector(".svg-And")
+  let AndPath = document.querySelector(".svg-And > g")
+
+
+  window.addEventListener('load',()=>{
+    setTimeout(()=>{
+ frontPath.addEventListener('mouseover',()=>{    
+    if(! frontPath.classList.contains("active3d")){
+      frontPath.classList.add("active3d")
+    setTimeout(()=>{
+      frontPath.classList.remove("active3d")
+    },1500)
+    }
+  })
+
+  
+
+  AndSvg.addEventListener('mouseover',()=>{    
+    if(! AndPath.classList.contains("activeFill")){
+      AndPath.classList.add("activeFill")
+    setTimeout(()=>{
+      AndPath.classList.remove("activeFill")
+    },1500)
+    }
+  })
+
+    },5000)
+  })
+
+
+ 
+
+
+
 
 if (paths.length > 0){
   setPathAnimation(0.15,2.8,2,'linear','#ffffff',true)
 }
 
-function setPathAnimation(delay, duration, strokeWidth, timingFunction, strokeColor,repeat) {
+function setPathAnimation(delay, duration, strokeWidth, timingFunction, strokeColor) {
   // if(paths.length == 0){return setPathAnimation(0.15,2.8,2,'linear','#ffffff',true)}
   // let mode=repeat?'infinite':'forwards'
   let mode='forwards'
@@ -79,7 +114,7 @@ function setPathAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
   setTextAnimation(0.15,2.8,2,'linear','#ddd',true)
 }
 
-function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor,repeat) {
+function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor) {
   // if(paths.length == 0){return setTextAnimation(0.15,2.8,2,'linear','#ffffff',true)}
   // let mode=repeat?'infinite':'forwards'
   let mode='forwards'
@@ -98,7 +133,6 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
         }
     setTextAnimation(0.15,2.8,0.3,'linear','#999999',true)
   }
-
 }
 
 </script>
@@ -111,7 +145,7 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin-bottom: 40%;
+  margin-bottom: 35%;
   h1::before{
     content: "I";
     display: block;
@@ -132,7 +166,7 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
   h1{
     margin-top: 17%;
     scale: 1.3;
-    position: relative;
+    position: relative;    
     span{
       text-align:left;
       vertical-align: text-top;
@@ -145,8 +179,70 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
       color: #999999;
     }
     .svg-path {
+      .svg-front {        
+        &.active3d {
+          animation-name: svg-hover-action;
+          animation-duration: 1s;
+        }
+        
+        @keyframes svg-hover-action {
+          0%{
+            transform:  scale3d(1,1,1);
+          }
+          30%{
+            transform:  scale3d(1.1,0.75,1);
+          }
+          40%{
+            transform:  scale3d(0.75,1.25,1);
+          }
+          50%{
+            transform:  scale3d(1.075,0.85,1);
+          }
+          65%{
+            transform:  scale3d(0.95,1.05,1);
+          }
+          75%{
+            transform:  scale3d(1.025,0.95,1);
+          }
+          100%{
+            transform:  scale3d(1,1,1);
+          }
+        }
+      }
+      
       .svg-And {
         transform: translateY(43%);
+        g {
+            &.activeFill{
+          animation-name: svg-And-hover-action;
+          animation-duration: 1s;
+        }
+        
+        @keyframes svg-And-hover-action {
+          0%{
+            transform:  scale3d(1,1,1);
+          }
+          30%{
+            transform:  scale3d(1,0.75,1);
+          }
+          40%{
+            transform:  scale3d(1,1,1);
+          }
+          50%{
+            transform:  scale3d(1,0.85,1);
+          }
+          65%{
+            transform:  scale3d(1,1,1);
+          }
+          75%{
+            transform:  scale3d(1,0.95,1);
+          }
+          100%{
+            transform:  scale3d(1,1,1);
+          }
+        }
+          
+        }
       }
       @keyframes svg-path-anim {
        40% {
@@ -165,33 +261,29 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
     }
     .svg-text {
       display: flex;
-      flex-direction: column;
+      flex-direction: column;   
       .text-svg {
         height: 20px;
-        font-size: 16px;
-        
+        font-size: 16px;        
         fill:white;
         stroke-width: 0px;
-        opacity: 0;
+        opacity: 0.5;
         animation: text-anim 1s forwards;
+        
       }
       @keyframes svg-text-anim {
-        from{opacity: 0;}
-        to{
-          opacity: 1;
+       40% {
+          stroke-dashoffset: 0;
+          fill: transparent;
         }
-      //  40% {
-      //     stroke-dashoffset: 0;
-      //     fill: transparent;
-      //   }
-      //   60% {
-      //     stroke-dashoffset: 0;
-      //     fill: #999999;
-      //   }
-      //   100% {
-      //     stroke-dashoffset: 0;
-      //     fill: #999999;
-      //   }        
+        60% {
+          stroke-dashoffset: 0;
+          fill: #999999;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill: #999999;
+        }        
       }
     }
   }    
