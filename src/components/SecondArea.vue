@@ -33,15 +33,46 @@ export default {
 
 <style lang="scss">
 .second-area-wrap {
+    padding: 15% 220px;
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 35%;
+    .second-left::before {
+        display: block;
+        content: "01";
+        position: absolute;
+        top: -3.4%;
+        left: -5%;
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    .second-left::after {
+        display: block;
+        content: "ABOUT ME";
+        position: absolute;
+        top: 77%;
+        left: -10%;
+        font-size: 1.6vw;
+        font-weight: 400;
+        transform: rotateZ(270deg);
+    }
     .second-left {
         width: 40%;
+        padding-left: 10%;        
         position:sticky;
         top:0;
+        figure::before {
+            content: "";
+            display:block;
+            position: absolute;
+            border-left: 1px solid black;
+            top: 15%;
+            left: 3.5%;
+            height: 13vw;
+            // transform: rotateZ(90deg);
+        }
         figure {
             img {
                 width: 100%;

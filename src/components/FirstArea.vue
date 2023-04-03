@@ -1,9 +1,95 @@
 <template>
-<article class="first-area-wrap">
-  <MyCanvas/>
+<article class="first-area-wrap">  
   <h1>
     <div class="svg-path">
-      <svg class="svg-front" width="445" height="142.401" viewBox="0 0 445 142.401" xmlns="http://www.w3.org/2000/svg">
+      <div class="svg-text-wrap">
+        <div class="svg-portfolio">
+        <svg class="text-svg p">
+          <text x="0" y="120" >
+            P
+          </text>
+        </svg>
+        <svg class="text-svg o">
+          <text x="0" y="120" >
+            o
+          </text>
+        </svg>
+        <svg class="text-svg r">
+          <text x="0" y="120" >
+            r
+          </text>
+        </svg>
+        <svg class="text-svg t">
+          <text x="0" y="120" >
+            t
+          </text>
+        </svg>
+        <svg class="text-svg f">
+          <text x="0" y="120" >
+            f
+          </text>
+        </svg>
+        <svg class="text-svg o">
+          <text x="0" y="120" >
+            o
+          </text>
+        </svg>
+        <svg class="text-svg l">
+          <text x="0" y="120" >
+            l
+          </text>
+        </svg>
+        <svg class="text-svg i">
+          <text x="0" y="120" >
+            i
+          </text>
+        </svg>
+        <svg class="text-svg o">
+          <text x="0" y="120" >
+            o
+          </text>
+        </svg>
+      </div>
+
+      <div class="svg-Front">
+        <svg class="text-svg F">
+          <text x="0" y="130" >
+            F
+          </text>
+        </svg>
+        <svg class="text-svg r">
+          <text x="0" y="130" >
+            r
+          </text>
+        </svg>
+        <svg class="text-svg o">
+          <text x="0" y="130" >
+            o
+          </text>
+        </svg>
+        <svg class="text-svg n">
+          <text x="0" y="130" >
+            n
+          </text>
+        </svg>
+        <svg class="text-svg t">
+          <text x="0" y="130" >
+            t
+          </text>
+        </svg>          
+      </div>
+      </div>
+      <div class="svg-And">
+        <svg class="text-svg And">
+          <text x="0" y="300" >
+            &
+          </text>
+        </svg>
+      </div>
+      
+
+
+      <!-- <svg class="svg-front" width="445" height="142.401" viewBox="0 0 445 142.401" xmlns="http://www.w3.org/2000/svg">
         <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#FFF" stroke-width="0.25mm" fill="none" style="stroke:#FFF;stroke-width:0.25mm;fill:none">
           <path d="M 25.6 139.4 L 0 139.4 L 0 0 L 72.8 0 L 72.8 22 L 25.6 22 L 25.6 58.6 L 66.8 58.6 L 66.8 81 L 25.6 81 L 25.6 139.4 Z" id="0" vector-effect="non-scaling-stroke"/>
           <path d="M 114.8 139.4 L 89.8 139.4 L 89.8 39.8 L 112.4 39.8 L 113.6 57.4 Q 114.975 54.048 117.642 50.328 A 53.091 53.091 0 0 1 118.55 49.1 A 23.796 23.796 0 0 1 123.368 44.407 A 32.175 32.175 0 0 1 127.85 41.65 A 25.152 25.152 0 0 1 133.658 39.578 Q 137.876 38.6 143.2 38.6 A 35.772 35.772 0 0 1 145.604 38.677 Q 146.789 38.757 147.828 38.92 A 20.134 20.134 0 0 1 148.3 39 A 20.068 20.068 0 0 1 151.554 39.869 A 17.884 17.884 0 0 1 152.4 40.2 L 146.8 66.4 Q 144.264 63.864 139.593 63.338 A 23.188 23.188 0 0 0 137 63.2 A 30.856 30.856 0 0 0 131.671 63.634 Q 127.482 64.369 124.4 66.35 A 28.241 28.241 0 0 0 120.84 69.033 Q 118.975 70.7 117.705 72.541 A 16.556 16.556 0 0 0 117.15 73.4 Q 115.342 76.4 114.925 78.335 A 5.085 5.085 0 0 0 114.8 79.4 L 114.8 139.4 Z" id="1" vector-effect="non-scaling-stroke"/>
@@ -16,9 +102,9 @@
         <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#FFF" stroke-width="0.25mm" fill="none" style="stroke:#FFF;stroke-width:0.25mm;fill:none">
           <path d="M 219.289 229.397 L 200.685 250.491 A 673.729 673.729 0 0 1 158.937 215.042 A 106.285 106.285 0 0 1 81.485 250.677 A 138.081 138.081 0 0 1 76.027 250.784 A 95.222 95.222 0 0 1 53.298 248.174 A 77.57 77.57 0 0 1 34.572 240.969 Q 18.312 232.18 9.23 217.532 A 60.245 60.245 0 0 1 0.002 185.012 A 64.788 64.788 0 0 1 24.824 133.779 Q 34.91 125.233 49.096 118.204 A 173.481 173.481 0 0 1 59.035 113.674 A 349.822 349.822 0 0 1 52.297 105.083 Q 45.98 96.744 42.138 90.397 A 97.175 97.175 0 0 1 41.603 89.504 A 82.955 82.955 0 0 1 34.484 74.582 A 59.607 59.607 0 0 1 30.91 54.641 Q 30.91 34.28 43.947 19.631 A 58.495 58.495 0 0 1 81.642 0.582 A 82.245 82.245 0 0 1 91.555 0.003 A 69.514 69.514 0 0 1 114.083 3.551 A 61.655 61.655 0 0 1 130.226 11.868 A 55.624 55.624 0 0 1 144.548 26.557 Q 152.102 38.172 152.338 53.227 A 62.18 62.18 0 0 1 152.346 54.202 A 56.444 56.444 0 0 1 136.104 94.044 A 76.39 76.39 0 0 1 132.57 97.561 A 92.324 92.324 0 0 1 121.598 106.206 Q 115.74 110.191 108.542 114.049 A 209.639 209.639 0 0 1 96.535 119.973 A 798.281 798.281 0 0 0 133.521 157.189 A 648.049 648.049 0 0 0 156.887 178.128 A 118.832 118.832 0 0 0 166.294 160.845 Q 170.375 151.749 173.841 140.788 A 269.654 269.654 0 0 0 178.859 122.61 L 203.029 132.278 A 334.229 334.229 0 0 1 195.232 155.795 Q 186.968 177.744 177.457 191.306 A 88.047 88.047 0 0 1 175.197 194.387 Q 193.068 210.061 219.289 229.397 Z M 73.83 130.374 A 118.652 118.652 0 0 0 59.235 137.857 Q 51.525 142.553 45.651 148.035 A 68.054 68.054 0 0 0 42.775 150.881 A 56.322 56.322 0 0 0 33.386 163.672 A 43.706 43.706 0 0 0 28.273 184.28 A 40.494 40.494 0 0 0 31.043 199.489 A 37.241 37.241 0 0 0 41.31 213.723 A 48.024 48.024 0 0 0 62.272 224.523 Q 69.65 226.342 78.339 226.459 A 89.186 89.186 0 0 0 79.543 226.467 A 82.248 82.248 0 0 0 123.488 214.309 Q 133.303 208.157 141.066 198.782 A 900.988 900.988 0 0 1 90.557 148.712 A 1033.906 1033.906 0 0 1 73.83 130.374 Z M 82.18 103.128 A 126.638 126.638 0 0 0 100.062 93.63 Q 108.768 87.978 114.481 81.605 A 39.473 39.473 0 0 0 125.392 54.641 A 29.287 29.287 0 0 0 117.189 33.987 A 33.152 33.152 0 0 0 92.975 22.887 A 43.672 43.672 0 0 0 91.262 22.854 A 33.852 33.852 0 0 0 69.875 30.032 A 29.413 29.413 0 0 0 58.028 51.463 A 38.832 38.832 0 0 0 57.863 55.081 A 45.189 45.189 0 0 0 60.623 70.288 Q 62.624 75.911 66.076 81.696 A 80.252 80.252 0 0 0 67.092 83.352 A 110.131 110.131 0 0 0 72.262 90.907 A 140.979 140.979 0 0 0 77.053 96.975 Q 81.547 102.527 82.105 103.069 A 0.221 0.221 0 0 0 82.18 103.128 Z" id="0" vector-effect="non-scaling-stroke"/>
         </g>
-      </svg>
+      </svg> -->
 
-    <div class="svg-text">
+    <!-- <div class="svg-text">
       <svg class="text-svg">
       <text x="0" y="15" >
         Hi,!
@@ -34,10 +120,11 @@
         프론트엔드로 취업을 준비중인
       </text>
     </svg>
-    </div>
+    </div> -->
         </div>
   </h1>
     <!-- <span class="And">&</span> -->
+    <MyCanvas/>
   </article>
 </template>
 
@@ -50,37 +137,35 @@ export default {
     
   mounted() {
     
-  let paths = document.querySelectorAll(".first-area-wrap path");
+  let paths = document.querySelectorAll(".first-area-wrap .svg-portfolio text");
   let texts = document.querySelectorAll('text')
   let frontPath = document.querySelector(".svg-front")
   let AndSvg = document.querySelector(".svg-And")
   let AndPath = document.querySelector(".svg-And > g")
-
-
-  window.addEventListener('load',()=>{
-    setTimeout(()=>{
- frontPath.addEventListener('mouseover',()=>{    
-    if(! frontPath.classList.contains("active3d")){
-      frontPath.classList.add("active3d")
-    setTimeout(()=>{
-      frontPath.classList.remove("active3d")
-    },1500)
-    }
-  })
+//   window.addEventListener('load',()=>{
+//     setTimeout(()=>{
+//  paths.addEventListener('mouseover',()=>{    
+//     if(! paths.classList.contains("active3d")){
+//       paths.classList.add("active3d")
+//     setTimeout(()=>{
+//       paths.classList.remove("active3d")
+//     },1500)
+//     }
+//   })
 
   
 
-  AndSvg.addEventListener('mouseover',()=>{    
-    if(! AndPath.classList.contains("activeFill")){
-      AndPath.classList.add("activeFill")
-    setTimeout(()=>{
-      AndPath.classList.remove("activeFill")
-    },1500)
-    }
-  })
+//   AndSvg.addEventListener('mouseover',()=>{    
+//     if(! AndPath.classList.contains("activeFill")){
+//       AndPath.classList.add("activeFill")
+//     setTimeout(()=>{
+//       AndPath.classList.remove("activeFill")
+//     },1500)
+//     }
+//   })
 
-    },5000)
-  })
+//     },5000)
+//   })
 
 
  
@@ -89,29 +174,7 @@ export default {
 
 
 if (paths.length > 0){
-  setPathAnimation(0.15,2.8,2,'linear','#ffffff',true)
-}
-
-function setPathAnimation(delay, duration, strokeWidth, timingFunction, strokeColor) {
-  // if(paths.length == 0){return setPathAnimation(0.15,2.8,2,'linear','#ffffff',true)}
-  // let mode=repeat?'infinite':'forwards'
-  let mode='forwards'
-  // console.log(paths,'??')
-            for (let i = 0; i < paths.length; i++) {
-                const path = paths[i];
-                const Pathlength = path.getTotalLength();
-                path.style["stroke-dashoffset"] = `${Pathlength}px`;
-                path.style["stroke-dasharray"] = `${Pathlength}px`;
-                path.style["stroke-width"] = `${strokeWidth}px`;
-                path.style["stroke"] = `${strokeColor}`;
-                path.style["animation"] = `${duration}s svg-path-anim ${mode} ${timingFunction}`;
-                path.style["animation-delay"] = `${i * delay}s`;
-            }
-        }
-    setPathAnimation(0.15,2.8,2,'linear','#ffffff',true)
-
-    if (texts.length > 0){
-  setTextAnimation(0.15,2.8,2,'linear','#ddd',true)
+  setTextAnimation(0.15,2.8,2,'linear','#999999',true)
 }
 
 function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor) {
@@ -130,30 +193,33 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
                 text.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
                 text.style["animation-delay"] = `${i * delay}s`;
             }
-        }
-    setTextAnimation(0.15,2.8,0.3,'linear','#999999',true)
+        }    
   }
 }
 
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Inter:wght@300;400;700&display=swap');
+
 
 .first-area-wrap {
+  padding: 7% 180px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  margin-bottom: 35%;
+  background-color: #0134CD;
+  color: #FFF;
+  position: relative;
   h1::before{
     content: "I";
     display: block;
     position: absolute;
-    top: 34%;
-    left: 13%;
+    top: 32.5%;
+    left: 13.8%;
     font-size: 40px;
-    color: #F53D44;
+    color: #4BDFFA;
   }
   h1::after{
     content: "'M 승환";
@@ -164,7 +230,7 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
     font-size: 40px;
   }
   h1{
-    margin-top: 17%;
+    margin-top: 10%;
     scale: 1.3;
     position: relative;    
     span{
@@ -177,8 +243,73 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
       text-align: left;
       font-size: 30px;
       color: #999999;
+      color: red;
     }
     .svg-path {
+      display: flex;
+      .svg-text-wrap {
+        width: 700px;
+        .svg-portfolio {
+          text-align: left;
+          font-size: 140px;
+          height: 140px;
+        .text-svg {
+          width: 80px;
+          height: 140px;
+          font-weight: 700;
+          text {
+            fill: none;
+          }
+        }
+        .p {
+          width: 88px;
+        }
+        .o {
+          width: 82px;
+        }
+        .r {
+          width: 58px;
+        }
+        .t {
+          width: 53px;
+        }
+        .f {
+          width: 54px;
+        }
+        .l, .i {
+          width: 35px;
+        }
+      }
+      .svg-Front {
+        text-align: right;
+        font-size: 160px;
+        .text-svg {
+          width: 80px;
+          height: 150px;
+          font-weight: 700;
+          text {
+            fill: #FFF;
+          }
+        }
+        .F {
+          width: 95px;
+        }
+        .r {
+          width: 65px;
+        }
+        .o {
+          width: 95px;
+        }
+        .n {
+          width: 95px;
+        }
+        .t {
+          width: 60px;
+        }
+        .And {
+          width: 35px;
+        }
+      }
       .svg-front {        
         &.active3d {
           animation-name: svg-hover-action;
@@ -209,55 +340,54 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
           }
         }
       }
-      
+      }
       .svg-And {
-        transform: translateY(43%);
-        g {
-            &.activeFill{
-          animation-name: svg-And-hover-action;
-          animation-duration: 1s;
-        }
-        
-        @keyframes svg-And-hover-action {
-          0%{
-            transform:  scale3d(1,1,1);
+        font-size: 400px;
+        .text-svg {
+          width: 280px;
+          height: 400px;
+          font-weight: 300;
+          text {
+            fill: #FFF;
           }
-          30%{
-            transform:  scale3d(1,0.75,1);
-          }
-          40%{
-            transform:  scale3d(1,1,1);
-          }
-          50%{
-            transform:  scale3d(1,0.85,1);
-          }
-          65%{
-            transform:  scale3d(1,1,1);
-          }
-          75%{
-            transform:  scale3d(1,0.95,1);
-          }
-          100%{
-            transform:  scale3d(1,1,1);
-          }
-        }
-          
         }
       }
-      @keyframes svg-path-anim {
-       40% {
-          stroke-dashoffset: 0;
-          fill: transparent;
-        }
-        60% {
-          stroke-dashoffset: 0;
-          fill: #ffffff;
-        }
-        100% {
-          stroke-dashoffset: 0;
-          fill: #ffffff;
-        }        
-      }      
+      // .svg-And {
+      //   // transform: translateY(43%);
+      //   transform: translateY(0%);
+      //   g {
+      //       &.activeFill{
+      //     animation-name: svg-And-hover-action;
+      //     animation-duration: 1s;
+      //   }
+        
+      //   @keyframes svg-And-hover-action {
+      //     0%{
+      //       transform:  scale3d(1,1,1);
+      //     }
+      //     30%{
+      //       transform:  scale3d(1,0.75,1);
+      //     }
+      //     40%{
+      //       transform:  scale3d(1,1,1);
+      //     }
+      //     50%{
+      //       transform:  scale3d(1,0.85,1);
+      //     }
+      //     65%{
+      //       transform:  scale3d(1,1,1);
+      //     }
+      //     75%{
+      //       transform:  scale3d(1,0.95,1);
+      //     }
+      //     100%{
+      //       transform:  scale3d(1,1,1);
+      //     }
+      //   }
+          
+      //   }
+      // }
+     
     }
     .svg-text {
       display: flex;
@@ -266,11 +396,11 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
         height: 20px;
         font-size: 16px;        
         fill:white;
-        stroke-width: 0px;
-        opacity: 0.5;
-        animation: text-anim 1s forwards;
-        
+        stroke-width: 3px;
+        opacity: 1;
+        animation: text-anim 1s forwards;        
       }
+
       @keyframes svg-text-anim {
        40% {
           stroke-dashoffset: 0;
@@ -278,11 +408,13 @@ function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeCo
         }
         60% {
           stroke-dashoffset: 0;
-          fill: #999999;
+          stroke-dasharray: 20;
         }
         100% {
           stroke-dashoffset: 0;
-          fill: #999999;
+          stroke-dasharray: 0;
+          // fill: none;
+
         }        
       }
     }

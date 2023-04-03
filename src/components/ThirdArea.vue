@@ -61,17 +61,47 @@ export default {
 
 <style lang="scss">
 .third-area-wrap {
-    margin-bottom: 25%;
+    padding: 30% 220px 10%;
+    background-color: #000;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    color: #FFF;    
     .third-left {
         width: 40%;
+        padding-left: 10%;
+        .left-wrap::before {
+        display: block;
+        content: "02";
+        position: absolute;
+        top: -91.5%;
+        left: -40%;
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    .left-wrap::after {
+        display: block;
+        content: "PROJECT";
+        position: absolute;
+        top: 42%;
+        left: -44.5%;
+        font-size: 1.6vw;
+        font-weight: 400;
+        transform: rotateZ(270deg);
+    }
         .left-wrap {
             position: sticky;
             top:50%;
-            z-index: 5;            
+            z-index: 5;
+            h2::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -57%;
+                left: -24%;
+                border-left: 1px solid #FFF;
+                height: 13vw;
+            }
             h2 {
             width: 120%;
             position: absolute;
@@ -79,7 +109,7 @@ export default {
             font-size: 3vw;
             display: block;            
             text-align: left;
-            transform: translateY(-75%);
+            transform: translateY(-80%);
             }
         }        
     }

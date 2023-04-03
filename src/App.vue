@@ -1,7 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
-  <NavBar/>
+  <!-- <NavBar/> -->
   <FirstArea/>
   <SecondArea/>
   <ThirdArea/>
@@ -31,19 +31,20 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+@import "@/assets/scss/main.scss";
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  color: #fff;
+  // color: #fff;
 }
 body {
-  background-color: #252525;
-  padding: 0 170px 0 400px;
+  font-family: "Inter", sans-serif;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter",Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
