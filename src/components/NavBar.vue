@@ -1,10 +1,10 @@
 <template>
-  <article class="navbar-wrap">
+  <article class="navbar-wrap" ref="navBarWrap">
     <div class="first-line">
         <h2 class="logo" @click="secNavigator(0)">ISH</h2>
     </div>
     <div class="second-line">
-        <ul class="hamburger">
+        <ul class="hamburger" ref="hamburgerList">
             <li v-for="(list,index) in hamburger" :key="index" :class="list" @click="secNavigator(index)">{{list}}</li>
             <!-- <li class="title">TITLE</li>
             <li class="about">ABOUT</li>
@@ -26,12 +26,13 @@
 </template>
 
 <script>
+
 export default {
     mounted() {
         const sectionList = document.querySelectorAll(".second-line > ul > li")
         const firstSec = document.querySelector(".first-area-wrap")
         const thirdSec = document.querySelector(".third-area-wrap")
-        const secondSec = document.querySelector(".second-area-wrap")
+        const secondSec = document.querySelector(".second-area-wrap")        
         
         // console.log(firstSec.clientHeight,'?????')
         // console.log(firstSec.offsetTop,'?????')
@@ -41,14 +42,19 @@ export default {
         // console.log(thirdSec.offsetTop,'?????')
 
                 document.addEventListener('scroll',()=>{
+                    console.log(this.$refs.hamburgerList.clientWidth)
                 // console.log(window.innerHeight)
-                if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight ){
+                if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight -150 ){
                     // sectionList[0].classList.add("active")
                     classRemove(0)
-                } else if ( window.pageYOffset >= firstSec.clientHeight && window.pageYOffset < ( firstSec.clientHeight + secondSec.clientHeight ) ){
+                    // console.log('첫번째섹션')
+                    this.$refs.hamburgerList.style["color"] = "#FFF"
+                } else if ( ( window.pageYOffset >= firstSec.clientHeight - this.$refs.hamburgerList.clientWidth ) && window.pageYOffset < ( ( firstSec.clientHeight + secondSec.clientHeight ) - this.$refs.hamburgerList.clientWidth ) ){
                     classRemove(1)
-                } else if ( window.pageYOffset >=( firstSec.clientHeight + secondSec.clientHeight ) && secondSec.clientHeight + thirdSec.clientHeight ){
+                    this.$refs.hamburgerList.style["color"] = "#000"
+                } else if ( window.pageYOffset >= ( ( firstSec.clientHeight + secondSec.clientHeight ) - this.$refs.hamburgerList.clientWidth ) && secondSec.clientHeight + thirdSec.clientHeight ){
                     classRemove(2)
+                    this.$refs.hamburgerList.style["color"] = "#FFF"
                 }
             }
         )
@@ -63,6 +69,25 @@ export default {
             })
         }
 
+
+        const getNavBarHeight = () => {
+            this.$refs.navBarWrap.style["height"] = `${document.querySelector(".first-area-wrap").clientHeight}px`
+        }
+
+        window.addEventListener("load",()=>{
+            getNavBarHeight()
+            setTimeout(()=>{
+            this.$refs.hamburgerList.childNodes[1].classList.add("active")
+            },5800)
+        })
+
+        window.addEventListener("resize",()=>{
+            getNavBarHeight()
+        })
+
+
+
+
        
     },
     data() {
@@ -71,17 +96,19 @@ export default {
         }
     },
     methods: {
+        
          secNavigator: function (index) {
-            
-            // console.log(hamburger,'?')
-            // console.log(index)
 
-            // console.log(hamburger[item].offsetTop)
-            const secY = document.querySelectorAll("article")
-            // console.log(secY[index+1].offsetTop + ( (secY[index+1].offsetTop) / 2 ))
+            const allArticle = document.querySelectorAll("article")
+            const secThree = [];
+            allArticle.forEach((obj,index)=>{
+                if(index == 1 || index == 3 || index == 4) {
+                    secThree.push(obj)
+                }
+            })
 
             window.scrollTo({
-                top: secY[index+1].offsetTop - ( (150) * index ),
+                top: secThree[index].offsetTop,
                 left: 0,
                 behavior: 'smooth'
     });
@@ -97,20 +124,22 @@ export default {
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 230px;
-    height: 100vh;
     min-height: 350px;
-    border-right: 1px solid #F53D44;
+    color: #FFF;
     .first-line {
-        position:relative;
+        position:fixed;
+        top: 5%;
+        left: 3%;
         h2::before {
             display: block;
             content: "";
             width: 1.4rem;
             height: 1.4rem;
-            background-color: #F53D44;
+            border: 1.5px solid #FFF;
             position: absolute;
             top: 0;
             left: 0;
@@ -121,51 +150,57 @@ export default {
             font-size: 2rem;
             &:hover{
                 cursor: pointer;
+                color: #0338d6;
+                -webkit-text-stroke: .5px #FFF;
+            }
+            &:hover::before{
+                background-color: rgba(255,255,255,0.95);
+                border-color: #0338d6;
             }
         }
     }
     .second-line {
         .hamburger {
+            position: fixed;
+            top: 15%;
+            right: -3%;
+            display: flex;
+            justify-content: space-between;
+            width: 11vw;
+            transform: rotateZ(90deg);
             li {
-                font-size: 16px;
-                position: relative;
+                font-size: .8vw;
                 text-align: left;
                 text-transform: uppercase;
-                &.active{color:#F53D44}
+                opacity: 0.5;
+                // mix-blend-mode: difference;                
+                font-weight: 700;
+                &.active{
+                    // color:#4BDFFA;
+                    animation-name: hamListScale;
+                    animation-duration: 500ms;
+                    animation-fill-mode: forwards;
+                    mix-blend-mode: difference;
+                }
+                @keyframes hamListScale {                    
+                    to {
+                        opacity: 1;
+                        text-decoration: line-through;
+                    }                    
+                }
                 &:hover{
                     cursor: pointer;
                 }
             }
             li:nth-child(2) {
-                margin: 50% 0;
-            }
-            .active::before {
-                content: "";
-                display: block;                
-                border-bottom: 1px solid #F53D44;
-                position: absolute;
-                top: 40%;
-                left: -5%;
-                width: 263%;
-                animation-name: activebar, fadeIn;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
-            }
-            @keyframes activebar {
-                from {
-                    width: 0%;
-                }
-                to {
-                    width: 263%;
-                }
-            }
+                margin: 0;
+            }           
         }
     }    
     .third-line {
         ul {
             li {
                 font-size: 10px;
-                color:#999999;
                 text-align: left;
                 line-height: 15px;
                 opacity: 0.6;
@@ -175,12 +210,14 @@ export default {
                 
                 margin: 6% 0 0 -5px;
                 span:hover > svg > g{
-                    fill: #F53D44;
+                    fill: #FFF;
                     transition: 0.2s;
+                    opacity: 1;
                 }
                 span:hover > svg{
-                    fill: #F53D44;
+                    fill: #FFF;
                     transition: 0.2s;
+                    opacity: 1;
                 }
             }
         }

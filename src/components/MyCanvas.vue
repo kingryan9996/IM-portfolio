@@ -12,7 +12,7 @@ export class Point {
     this.fixedY = y;
     this.speed = 0.01;
     this.cur = index;
-    this.max = Math.random() * 10 + 30;
+    this.max = Math.random() * 20 + 30;
   }
 
   update() {
@@ -33,7 +33,7 @@ export class Wave {
     this.stageWidth = stageWidth;
     this.stageHeight = stageHeight;
 
-    this.centerX = stageWidth / 2;
+    this.centerX = stageWidth / 10;
     this.centerY = stageHeight / 2;
 
     this.pointGap = this.stageWidth / (this.totalPoints - 1);

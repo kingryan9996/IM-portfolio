@@ -1,8 +1,14 @@
 <template>
   <article class="third-area-wrap">
     <div class="third-left">
-        <div class="left-wrap">
-            <h2>WORK ABOUT SKILL</h2>
+        <div class="section-02">
+            <div class="section-number">02</div>
+            <div class="section-title">
+                <span>PROJECT</span>
+            </div>
+        </div>
+        <div>
+            <div class="work-description" v-html="workDescription"/>
         </div>
     </div>
     <div class="third-right">
@@ -17,43 +23,72 @@
 
 <script>
 export default {
+    data() {
+        return {
+            workDescription:""
+        }
+    },
     mounted() {
 
+        const thirdSec = document.querySelector(".third-area-wrap")
         const workList = document.querySelectorAll(".third-right-items > li")
 
-        document.querySelector(".left-wrap").style["padding-bottom"] = `${ (workList[1].clientHeight / 100 ) * 60 }px`;
+        // document.querySelector(".third-left").style["padding-bottom"] = `${ (workList[1].clientHeight / 100 ) * 60 }px`;
 
-        console.log(workList)
+        // console.log(workList)
+        // console.log(workList[0].clientHeight)
+        // console.log(thirdSec.offsetTop + workList[0].offsetTop)
+        // console.log(thirdSec.offsetTop + workList[1].offsetTop)
+        // console.log(thirdSec.offsetTop + workList[2].offsetTop)
 
-        console.log(document.querySelector(".left-wrap > h2"))
+
+        // console.log(document.querySelector(".third-left > h2"))
 
 
         document.addEventListener('scroll',()=>{
-                // console.log(window.innerHeight)
-                if ( window.pageYOffset > workList[0].clientHeight ){
-                    // sectionList[0].classList.add("active")
-                    console.log("첫번째 작품")
-                } 
-                // else if ( window.pageYOffset >= firstSec.clientHeight && window.pageYOffset < ( firstSec.clientHeight + secondSec.clientHeight ) ){
-                //     classRemove(1)
-                // } else if ( window.pageYOffset >=( firstSec.clientHeight + secondSec.clientHeight ) && secondSec.clientHeight + thirdSec.clientHeight ){
-                //     classRemove(2)
-                // }
+                if ( window.pageYOffset >= 0 && ( window.pageYOffset < thirdSec.offsetTop + workList[0].offsetTop ) ){
+                    this.workDescription = "프로젝트 공간"
+                } else if ( window.pageYOffset > ( thirdSec.offsetTop + workList[0].offsetTop ) && ( window.pageYOffset < thirdSec.offsetTop + workList[1].offsetTop ) ){
+                    this.workDescription = "첫번째 작품"
+                } else if ( window.pageYOffset > ( thirdSec.offsetTop + workList[1].offsetTop ) && ( window.pageYOffset < thirdSec.offsetTop + workList[2].offsetTop ) ){
+                    this.workDescription = "두번째 작품"
+                } else if ( window.pageYOffset > ( thirdSec.offsetTop + workList[2].offsetTop ) ){
+                    this.workDescription = "세번째 작품"
+                }
             }
         )
 
-        // const classRemove = (num) => {
-        //     sectionList.forEach((e,index)=> {
-        //     if (index!=num ) { e.classList.remove("active")
-        //     } else if ( index==num && e.className != "active" ) {
-        //         e.classList.add("active")
-        //     }
-        //     })
-        // }
-        
+        const getSec03Height = () => {
 
+            const leftSide02Div = document.querySelector(".third-left")
+            const chapterBorder = document.querySelector(".chapterBorder02")
 
+            leftSide02Div.style = `
+            height: ${workList[0].clientHeight}px;
+            padding-top: ${workList[0].clientHeight / 5}px;
+            margin-bottom: ${workList[0].clientHeight / 2}px`;
 
+            // console.log(leftSide02Div)
+            chapterBorder.style = `
+            position: absolute;
+            border-top: 1px solid #FFF;
+            width: ${leftSide02Div.clientHeight / 1.6}px;
+            top: 50%;
+            left: 110%;
+            transform: translateY(-50%);`;
+        }
+
+        window.addEventListener("load",()=>{
+            const secChapterWrap = document.querySelector(".section-02 > .section-title ")
+            const secChapter = document.createElement("div")
+            secChapterWrap.appendChild(secChapter)
+            secChapter.classList.add("chapterBorder02")
+
+            getSec03Height();
+        })
+        window.addEventListener('resize',()=>{
+            getSec03Height();
+        })
 
     }
 }
@@ -61,7 +96,8 @@ export default {
 
 <style lang="scss">
 .third-area-wrap {
-    padding: 30% 220px 10%;
+    padding: 20% 220px 10%;
+    position: relative;
     background-color: #000;
     display: flex;
     flex-wrap: wrap;
@@ -70,49 +106,38 @@ export default {
     .third-left {
         width: 40%;
         padding-left: 10%;
-        .left-wrap::before {
-        display: block;
-        content: "02";
-        position: absolute;
-        top: -91.5%;
-        left: -40%;
-        font-size: 4vw;
-        font-weight: 700;
-    }
-    .left-wrap::after {
-        display: block;
-        content: "PROJECT";
-        position: absolute;
-        top: 42%;
-        left: -44.5%;
-        font-size: 1.6vw;
-        font-weight: 400;
-        transform: rotateZ(270deg);
-    }
-        .left-wrap {
-            position: sticky;
-            top:50%;
-            z-index: 5;
-            h2::before {
-                content: "";
-                display: block;
-                position: absolute;
-                top: -57%;
-                left: -24%;
-                border-left: 1px solid #FFF;
-                height: 13vw;
-            }
-            h2 {
-            width: 120%;
+        position:sticky;
+        top:10%;
+        .section-02 {
+            height: 100%;
             position: absolute;
-            left: 0;
+            top: 18%;
+            left: -10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+            .section-number {
+                font-size: 4vw;
+                font-weight: 700;
+                position: static;
+                background-color: #000;
+                z-index: 1;
+            }
+            .section-title {
+                position:relative;
+                transform: rotateZ(270deg);
+                font-size: 1.6vw;
+                font-weight: 400;
+                }
+            }
+            .work-description {
+            width: 100%;
             font-size: 3vw;
             display: block;            
             text-align: left;
-            transform: translateY(-80%);
-            }
-        }        
-    }
+            }               
+        }
     .third-right {
         width: 60%;
         display: flex;
@@ -127,7 +152,8 @@ export default {
                 top:30%;
                 img {
                     width: 100%;
-                    height: 530px;
+                    --p:(width * 3)px;
+                    height: --p;
                     box-shadow: 0 0 30px rgba(0,0,0,0.4);
                 }
             }
