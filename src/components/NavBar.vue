@@ -1,27 +1,14 @@
 <template>
   <article class="navbar-wrap" ref="navBarWrap">
     <div class="first-line">
-        <h2 class="logo" @click="secNavigator(0)">ISH</h2>
+        <h2 ref="navLogo" class="blueW" @click="secNavigator(0)">ISH</h2>
     </div>
-    <div class="second-line">
         <ul class="hamburger" ref="hamburgerList">
             <li v-for="(list,index) in hamburger" :key="index" :class="list" @click="secNavigator(index)">{{list}}</li>
             <!-- <li class="title">TITLE</li>
             <li class="about">ABOUT</li>
             <li class="work">WORK</li> -->
         </ul>
-    </div>
-    <div class="third-line">
-        <ul>            
-            <li>서울시 관악구</li>
-            <li>kingryan9996@gmail.com</li>
-            <li class="sns-link">
-                <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 30" width="24px" height="24px" fill="#999999"><path d="M 6 4 C 4.9069372 4 4 4.9069372 4 6 L 4 14.832031 A 1.0001 1.0001 0 0 0 4 15.158203 L 4 19.832031 A 1.0001 1.0001 0 0 0 4 20.158203 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 24 26 C 25.093063 26 26 25.093063 26 24 L 26 20.167969 A 1.0001 1.0001 0 0 0 26 19.841797 L 26 15.167969 A 1.0001 1.0001 0 0 0 26 14.841797 L 26 6 C 26 4.9069372 25.093063 4 24 4 L 6 4 z M 6 11 L 24 11 L 24 14 L 6 14 L 6 11 z M 6 16 L 24 16 L 24 19 L 6 19 L 6 16 z M 6 21 L 24 21 L 24 24 L 6 24 L 6 21 z"/></svg></span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M8,3c-2.757,0 -5,2.243 -5,5v8c0,2.757 2.243,5 5,5h8c2.757,0 5,-2.243 5,-5v-8c0,-2.757 -2.243,-5 -5,-5zM8,5h8c1.654,0 3,1.346 3,3v8c0,1.654 -1.346,3 -3,3h-8c-1.654,0 -3,-1.346 -3,-3v-8c0,-1.654 1.346,-3 3,-3zM17,6c-0.55228,0 -1,0.44772 -1,1c0,0.55228 0.44772,1 1,1c0.55228,0 1,-0.44772 1,-1c0,-0.55228 -0.44772,-1 -1,-1zM12,7c-2.757,0 -5,2.243 -5,5c0,2.757 2.243,5 5,5c2.757,0 5,-2.243 5,-5c0,-2.757 -2.243,-5 -5,-5zM12,9c1.654,0 3,1.346 3,3c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3z"></path></g></g></svg></span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11.666,2.005c-5.046,0.165 -9.292,4.246 -9.641,9.283c-0.369,5.329 3.442,9.832 8.481,10.589v-7.227h-1.614c-0.726,0 -1.314,-0.588 -1.314,-1.314v0c0,-0.726 0.588,-1.314 1.314,-1.314h1.613v-1.749c0,-2.896 1.411,-4.167 3.818,-4.167c0.357,0 0.662,0.008 0.921,0.021c0.636,0.031 1.129,0.561 1.129,1.198v0c0,0.663 -0.537,1.2 -1.2,1.2h-0.442c-1.022,0 -1.379,0.969 -1.379,2.061v1.437h1.87c0.591,0 1.043,0.527 0.953,1.111l-0.108,0.701c-0.073,0.47 -0.477,0.817 -0.953,0.817h-1.762v7.247c4.883,-0.663 8.648,-4.837 8.648,-9.899c0,-5.634 -4.659,-10.179 -10.334,-9.995z"></path></g></g></svg></span>
-            </li>
-        </ul>
-    </div>
   </article>
 </template>
 
@@ -29,10 +16,12 @@
 
 export default {
     mounted() {
-        const sectionList = document.querySelectorAll(".second-line > ul > li")
+        const sectionList = document.querySelectorAll(".hamburger > li")
         const firstSec = document.querySelector(".first-area-wrap")
         const thirdSec = document.querySelector(".third-area-wrap")
         const secondSec = document.querySelector(".second-area-wrap")        
+        const logoEl = this.$refs.navLogo
+        console.log(logoEl,'???')
         
         // console.log(firstSec.clientHeight,'?????')
         // console.log(firstSec.offsetTop,'?????')
@@ -42,31 +31,42 @@ export default {
         // console.log(thirdSec.offsetTop,'?????')
 
                 document.addEventListener('scroll',()=>{
-                    console.log(this.$refs.hamburgerList.clientWidth)
-                // console.log(window.innerHeight)
-                if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight -150 ){
-                    // sectionList[0].classList.add("active")
+                    logoClassFn();
+                    let hamVisTunning = ( this.$refs.hamburgerList.clientWidth * 0.80 )
+                if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight - hamVisTunning ){
                     classRemove(0)
-                    // console.log('첫번째섹션')
                     this.$refs.hamburgerList.style["color"] = "#FFF"
-                } else if ( ( window.pageYOffset >= firstSec.clientHeight - this.$refs.hamburgerList.clientWidth ) && window.pageYOffset < ( ( firstSec.clientHeight + secondSec.clientHeight ) - this.$refs.hamburgerList.clientWidth ) ){
+                } else if ( ( window.pageYOffset >= firstSec.clientHeight - hamVisTunning ) && window.pageYOffset < ( ( firstSec.clientHeight + secondSec.clientHeight ) - hamVisTunning ) ){
                     classRemove(1)
                     this.$refs.hamburgerList.style["color"] = "#000"
-                } else if ( window.pageYOffset >= ( ( firstSec.clientHeight + secondSec.clientHeight ) - this.$refs.hamburgerList.clientWidth ) && secondSec.clientHeight + thirdSec.clientHeight ){
+                } else if ( window.pageYOffset >= ( ( firstSec.clientHeight + secondSec.clientHeight ) - hamVisTunning ) && secondSec.clientHeight + thirdSec.clientHeight ){
                     classRemove(2)
                     this.$refs.hamburgerList.style["color"] = "#FFF"
                 }
             }
         )
 
+        const logoClassFn = () => {
+            console.log(( firstSec.clientHeight / 18 ))
+            let logoVisTunning = ( firstSec.clientHeight / 18 )
+            if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight - logoVisTunning && logoEl.className != "blueW" ){
+                logoEl.className = "blueW"
+            } else if ( ( window.pageYOffset >= firstSec.clientHeight - logoVisTunning ) && window.pageYOffset < ( firstSec.clientHeight + secondSec.clientHeight - logoVisTunning ) && logoEl.className != "blackW" ){
+                logoEl.className = "blackW"
+            } else if ( window.pageYOffset >= ( firstSec.clientHeight + secondSec.clientHeight -logoVisTunning ) && secondSec.clientHeight + thirdSec.clientHeight && logoEl.className != "Wblack" ){
+                logoEl.className = "Wblack"
+            }
+        }
+
 
         const classRemove = (num) => {
             sectionList.forEach((e,index)=> {
-            if (index!=num ) { e.classList.remove("active")
-            } else if ( index==num && e.className != "active" ) {
-                e.classList.add("active")
-            }
-            })
+                    if (index!=num ) { e.classList.remove("active")
+                    } else if ( index==num && e.className != "active" ) {
+                        e.classList.add("active")
+                    }
+                }
+            )
         }
 
 
@@ -75,14 +75,14 @@ export default {
         }
 
         window.addEventListener("load",()=>{
-            getNavBarHeight()
+            // getNavBarHeight()
             setTimeout(()=>{
             this.$refs.hamburgerList.childNodes[1].classList.add("active")
             },5800)
         })
 
         window.addEventListener("resize",()=>{
-            getNavBarHeight()
+            // getNavBarHeight()
         })
 
 
@@ -92,7 +92,7 @@ export default {
     },
     data() {
         return {
-        hamburger: ["title","about","work"]
+        hamburger: ["main","about","work"]
         }
     },
     methods: {
@@ -126,10 +126,7 @@ export default {
     position: fixed;
     z-index: 10;
     top: 0;
-    left: 0;
-    width: 230px;
-    min-height: 350px;
-    color: #FFF;
+    left: 0;    
     .first-line {
         position:fixed;
         top: 5%;
@@ -138,16 +135,21 @@ export default {
             display: block;
             content: "";
             width: 1.4rem;
-            height: 1.4rem;
-            border: 1.5px solid #FFF;
+            height: 1.4rem;            
             position: absolute;
             top: 0;
             left: 0;
-            z-index: -1;            
+            z-index: -1;
             transform: translate(-30%,-5%);
         }
         h2 {
-            font-size: 2rem;
+            font-size: 2rem;            
+        }
+        .blueW::before {
+            border: 1.5px solid #FFF;
+        }
+        .blueW {
+            color: #FFF;
             &:hover{
                 cursor: pointer;
                 color: #0338d6;
@@ -158,16 +160,96 @@ export default {
                 border-color: #0338d6;
             }
         }
+        .blackW::before {
+            border: 1.5px solid #000;
+        }
+        .blackW {
+            color: #000;
+            &:hover{
+                cursor: pointer;
+                color: #FFF;
+                -webkit-text-stroke: 1.5px #000;
+            }
+            &:hover::before{
+                background-color: rgba( 0,0,0,0.95);
+                border-color: #FFF;
+            }
+        }
+        .Wblack::before {
+            border: 1.5px solid #FFF;
+        }
+        .Wblack {
+            color: #FFF;
+            &:hover{
+                cursor: pointer;
+                color: #000;
+                -webkit-text-stroke: 0.5px #FFF;
+            }
+            &:hover::before{
+                background-color: rgba( 255,255,255,0.95);
+                border-color: #FFF;
+            }
+        }
     }
-    .second-line {
+        .hamburger::before {
+            display: block;
+            content: "";
+            position: fixed;
+            width: 11vw;
+            border-bottom: 1px solid;
+            bottom: 0;
+            left: 150%;
+            // transform: translateX(150%);
+            animation-name: hamBeforeArrow;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        .hamburger::after {
+            display: block;
+            content: "";
+            position: fixed;
+            width: 1.5vw;
+            border-bottom: 1px solid;
+            bottom: 0.5vw;
+            left: 238%;
+            transform: rotateZ(45deg);
+            animation-name: hamAfterArrow;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes hamBeforeArrow {
+            0% {
+
+            }
+            50% {
+                transform: translateX(50px);
+            }
+            100% {
+
+            }
+        }
+        @keyframes hamAfterArrow {
+            0% {
+
+            }
+            50% {
+                transform: translateX(50px) rotateZ(45deg);
+            }
+            100% {
+
+            }
+        }
         .hamburger {
             position: fixed;
-            top: 15%;
+            top: 20%;
             right: -3%;
             display: flex;
             justify-content: space-between;
             width: 11vw;
             transform: rotateZ(90deg);
+            color:#FFF;
             li {
                 font-size: .8vw;
                 text-align: left;
@@ -196,31 +278,6 @@ export default {
                 margin: 0;
             }           
         }
-    }    
-    .third-line {
-        ul {
-            li {
-                font-size: 10px;
-                text-align: left;
-                line-height: 15px;
-                opacity: 0.6;
-            }
-            .sns-link{
-                display: flex;
-                
-                margin: 6% 0 0 -5px;
-                span:hover > svg > g{
-                    fill: #FFF;
-                    transition: 0.2s;
-                    opacity: 1;
-                }
-                span:hover > svg{
-                    fill: #FFF;
-                    transition: 0.2s;
-                    opacity: 1;
-                }
-            }
-        }
-    }    
+    
 }
 </style>

@@ -136,8 +136,8 @@ class App {
     this.stageWidth = document.body.clientWidth;
     this.stageHeight = this.canvas.clientHeight;
 
-    this.canvas.width = this.stageWidth * 1;
-    this.canvas.height = this.stageHeight * 0.6;
+    this.canvas.width = this.stageWidth * 0.7;
+    this.canvas.height = this.stageHeight * 0.7;
     this.ctx.scale(1, 1);
 
     this.waveGroup.resize(this.stageWidth, this.stageHeight);
@@ -166,7 +166,7 @@ canvas{
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 1;
 	width: 100%;
 	height: 200px;
 	// scale: 1.8;
