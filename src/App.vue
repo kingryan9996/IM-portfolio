@@ -40,6 +40,10 @@ export default class App extends Vue {}
   list-style: none;
   // color: #fff;
 }
+a, a:link, a:hover, a:active, a:focus, a:visited {
+  text-decoration: none;
+
+}
 body {
   font-family: "Inter", sans-serif;
 }

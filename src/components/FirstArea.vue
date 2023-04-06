@@ -90,12 +90,25 @@
     <!-- <span class="And">&</span> -->
     <div class="sns-line">
         <ul>            
-            <li>서울시 관악구</li>
-            <li>kingryan9996@gmail.com</li>
+            <li><span>Address : 서울시 관악구</span></li>
+            <li><span><a href="mailto:kingryan9996@gmail.com">Email : kingryan9996@gmail.com</a></span></li>
+            <li><span><a href='tel:010-9996-5765'>Phone : 010-9996-5765</a></span></li>
             <li class="sns-link">
-                <span><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 30" width="24px" height="24px" fill="#999999"><path d="M 6 4 C 4.9069372 4 4 4.9069372 4 6 L 4 14.832031 A 1.0001 1.0001 0 0 0 4 15.158203 L 4 19.832031 A 1.0001 1.0001 0 0 0 4 20.158203 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 24 26 C 25.093063 26 26 25.093063 26 24 L 26 20.167969 A 1.0001 1.0001 0 0 0 26 19.841797 L 26 15.167969 A 1.0001 1.0001 0 0 0 26 14.841797 L 26 6 C 26 4.9069372 25.093063 4 24 4 L 6 4 z M 6 11 L 24 11 L 24 14 L 6 14 L 6 11 z M 6 16 L 24 16 L 24 19 L 6 19 L 6 16 z M 6 21 L 24 21 L 24 24 L 6 24 L 6 21 z"/></svg></span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M8,3c-2.757,0 -5,2.243 -5,5v8c0,2.757 2.243,5 5,5h8c2.757,0 5,-2.243 5,-5v-8c0,-2.757 -2.243,-5 -5,-5zM8,5h8c1.654,0 3,1.346 3,3v8c0,1.654 -1.346,3 -3,3h-8c-1.654,0 -3,-1.346 -3,-3v-8c0,-1.654 1.346,-3 3,-3zM17,6c-0.55228,0 -1,0.44772 -1,1c0,0.55228 0.44772,1 1,1c0.55228,0 1,-0.44772 1,-1c0,-0.55228 -0.44772,-1 -1,-1zM12,7c-2.757,0 -5,2.243 -5,5c0,2.757 2.243,5 5,5c2.757,0 5,-2.243 5,-5c0,-2.757 -2.243,-5 -5,-5zM12,9c1.654,0 3,1.346 3,3c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3z"></path></g></g></svg></span>
-                <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11.666,2.005c-5.046,0.165 -9.292,4.246 -9.641,9.283c-0.369,5.329 3.442,9.832 8.481,10.589v-7.227h-1.614c-0.726,0 -1.314,-0.588 -1.314,-1.314v0c0,-0.726 0.588,-1.314 1.314,-1.314h1.613v-1.749c0,-2.896 1.411,-4.167 3.818,-4.167c0.357,0 0.662,0.008 0.921,0.021c0.636,0.031 1.129,0.561 1.129,1.198v0c0,0.663 -0.537,1.2 -1.2,1.2h-0.442c-1.022,0 -1.379,0.969 -1.379,2.061v1.437h1.87c0.591,0 1.043,0.527 0.953,1.111l-0.108,0.701c-0.073,0.47 -0.477,0.817 -0.953,0.817h-1.762v7.247c4.883,-0.663 8.648,-4.837 8.648,-9.899c0,-5.634 -4.659,-10.179 -10.334,-9.995z"></path></g></g></svg></span>
+              <span>
+                <a target="_blank" href="https://velog.io/@kingryan9996">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 30" width="24px" height="24px" fill="#999999"><path d="M 6 4 C 4.9069372 4 4 4.9069372 4 6 L 4 14.832031 A 1.0001 1.0001 0 0 0 4 15.158203 L 4 19.832031 A 1.0001 1.0001 0 0 0 4 20.158203 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 24 26 C 25.093063 26 26 25.093063 26 24 L 26 20.167969 A 1.0001 1.0001 0 0 0 26 19.841797 L 26 15.167969 A 1.0001 1.0001 0 0 0 26 14.841797 L 26 6 C 26 4.9069372 25.093063 4 24 4 L 6 4 z M 6 11 L 24 11 L 24 14 L 6 14 L 6 11 z M 6 16 L 24 16 L 24 19 L 6 19 L 6 16 z M 6 21 L 24 21 L 24 24 L 6 24 L 6 21 z"/></svg>
+                </a>                  
+              </span>
+              <span>
+                <a target="_blank" href="https://www.instagram.com/kingryan9996/">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M8,3c-2.757,0 -5,2.243 -5,5v8c0,2.757 2.243,5 5,5h8c2.757,0 5,-2.243 5,-5v-8c0,-2.757 -2.243,-5 -5,-5zM8,5h8c1.654,0 3,1.346 3,3v8c0,1.654 -1.346,3 -3,3h-8c-1.654,0 -3,-1.346 -3,-3v-8c0,-1.654 1.346,-3 3,-3zM17,6c-0.55228,0 -1,0.44772 -1,1c0,0.55228 0.44772,1 1,1c0.55228,0 1,-0.44772 1,-1c0,-0.55228 -0.44772,-1 -1,-1zM12,7c-2.757,0 -5,2.243 -5,5c0,2.757 2.243,5 5,5c2.757,0 5,-2.243 5,-5c0,-2.757 -2.243,-5 -5,-5zM12,9c1.654,0 3,1.346 3,3c0,1.654 -1.346,3 -3,3c-1.654,0 -3,-1.346 -3,-3c0,-1.654 1.346,-3 3,-3z"></path></g></g></svg>
+                </a>
+              </span>
+              <span>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=100003734940692">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px" fill-rule="nonzero"><g fill="#999999" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M11.666,2.005c-5.046,0.165 -9.292,4.246 -9.641,9.283c-0.369,5.329 3.442,9.832 8.481,10.589v-7.227h-1.614c-0.726,0 -1.314,-0.588 -1.314,-1.314v0c0,-0.726 0.588,-1.314 1.314,-1.314h1.613v-1.749c0,-2.896 1.411,-4.167 3.818,-4.167c0.357,0 0.662,0.008 0.921,0.021c0.636,0.031 1.129,0.561 1.129,1.198v0c0,0.663 -0.537,1.2 -1.2,1.2h-0.442c-1.022,0 -1.379,0.969 -1.379,2.061v1.437h1.87c0.591,0 1.043,0.527 0.953,1.111l-0.108,0.701c-0.073,0.47 -0.477,0.817 -0.953,0.817h-1.762v7.247c4.883,-0.663 8.648,-4.837 8.648,-9.899c0,-5.634 -4.659,-10.179 -10.334,-9.995z"></path></g></g></svg>
+                </a>
+              </span>
             </li>
         </ul>
     </div>
@@ -239,6 +252,7 @@ export default {
   h1{
     margin-top: 10%;
     scale: 1.3;
+    // 미니멈 0.45
     position: relative;    
     span{
       text-align:left;
@@ -380,6 +394,7 @@ export default {
       }
       .svg-And {
         font-size: 400px;
+        transform: translateY(-2.5%);
         .text-svg {
           width: 280px;
           height: 400px;
@@ -388,8 +403,7 @@ export default {
           animation-name: svg-hover-action;
           animation-duration: 750ms;
           animation-iteration-count: 1;
-          }
-            
+          }            
             @keyframes svg-hover-action {
               0%{
                 transform:  scale3d(1,1,1);
@@ -454,25 +468,37 @@ export default {
         bottom: 3%;
         z-index: 2;
         ul {
+          li:nth-child(2) {
+            margin: 0.1vw 0;
+          }
             li {
-                font-size: 10px;
+                font-size: 12px;
                 text-align: left;
                 line-height: 15px;
+                span{
+                  opacity: 0.6;                  
+                  a {                    
+                  color: #FFF;
+                  }
+                }
+                span:hover{
+                    opacity: 1;
+                }
               }
               .sns-link{
                 display: flex;
                 margin: 6% 0 0 -5px;
                 span {
-                  opacity: 0.6;                  
+                  scale: 1.1;
                 }
-                span:hover{
-                    opacity: 1;
+                span:nth-child(2) {
+                  margin: 0 0.5vw;
                 }
-                span:hover > svg > g {
+                span:hover > a > svg > g {
                     fill: #FFF;
                     transition: 0.2s;
                 }
-                span:hover > svg {
+                span:hover > a > svg {
                     fill: #FFF;
                     transition: 0.2s;
                 }
