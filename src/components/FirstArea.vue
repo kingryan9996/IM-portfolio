@@ -128,7 +128,8 @@ export default {
     let startTime = new Date();    
 
     if (paths.length > 0) {
-    setTextAnimation(0.15,2.8,2,'linear','#FFF',true)
+    // setTextAnimation(0.15,2.8,2,'linear','#FFF',true)
+    setTextAnimation(0.1,1.2,2,'linear','#FFF',true)
   }
 
   function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor) {
@@ -158,7 +159,7 @@ export default {
       AndSvgEl.addEventListener('mouseover',(e)=>{
 
         let endTime = new Date();
-        if (endTime - startTime > 5500)
+        if (endTime - startTime > 3200)
             if (! e.target.parentElement.classList.contains("active3d")) {
               e.target.parentElement.classList.add("active3d")              
                 setTimeout(()=>{
@@ -172,7 +173,7 @@ export default {
         textSvg[index].addEventListener('mouseover',(e)=>{
 
           let endTime = new Date();
-          if (endTime - startTime > 5500)
+          if (endTime - startTime > 3200)
             if (! e.target.parentElement.classList.contains("active3d")) {
               e.target.parentElement.classList.add("active3d")
               if (e.target.style.fill == ""){
@@ -216,7 +217,7 @@ export default {
     color: #4BDFFA;
     opacity: 0;
     animation-name: h1OPacity;
-    animation-duration: 5.8s;
+    animation-duration: 3.2s;
     animation-fill-mode: forwards;
   }
   h1::after{
@@ -228,7 +229,7 @@ export default {
     font-size: 40px;
     opacity: 0;
     animation-name: h1OPacity;
-    animation-duration: 5.8s;
+    animation-duration: 3.2s;
     animation-fill-mode: forwards;
   }
   @keyframes h1OPacity

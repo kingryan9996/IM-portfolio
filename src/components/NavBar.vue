@@ -85,7 +85,7 @@ export default {
             // getNavBarHeight()
             setTimeout(()=>{
             this.$refs.hamburgerList.childNodes[1].classList.add("active")
-            },5800)
+            },3500)
         })
 
         window.addEventListener("resize",()=>{
@@ -214,7 +214,7 @@ export default {
             // transform: translateX(150%);
             animation-name: hamBeforeArrow;
             animation-duration: 10s;
-            animation-delay: 6.2s;
+            animation-delay: 3.8s;
             animation-direction: alternate;
             animation-iteration-count: infinite;
         }
@@ -231,7 +231,7 @@ export default {
             transform: rotateZ(45deg);
             animation-name: hamAfterArrow;
             animation-duration: 10s;
-            animation-delay: 6.2s;
+            animation-delay: 3.8s;
             animation-direction: alternate;
             animation-iteration-count: infinite;
         }

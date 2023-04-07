@@ -5,7 +5,6 @@
   <FirstArea/>
   <SecondArea/>
   <ThirdArea/>
-  <FourthArea/>
 </template>
 
 <script lang="ts">
@@ -15,7 +14,6 @@ import NavBar from './components/NavBar.vue';
 import FirstArea from './components/FirstArea.vue'
 import SecondArea from './components/SecondArea.vue'
 import ThirdArea from './components/ThirdArea.vue'
-import FourthArea from './components/FourthArea.vue';
 
 @Options({
   components: {
@@ -23,8 +21,7 @@ import FourthArea from './components/FourthArea.vue';
     NavBar,
     FirstArea,
     SecondArea,
-    ThirdArea,
-    FourthArea
+    ThirdArea
   },
 })
 export default class App extends Vue {}
