@@ -16,12 +16,12 @@
           <div class="about-intro">
               <div class="intro-first">                
                   <p>
-                  저는 사이트를 방문하는 유저가<br/>
-                  지루한 경험을 주는 사이트가 아닌,<br/>
-                  끊김없는 매끄러운 로딩과 렌더링을 통해<br/>
-                  즐거운 경험을 주고 싶은 웹 개발자입니다.
+                    저는 문제가 발생하면 한 발짝 뒤로 물러나<br/>
+                  전체적인 데이터의 흐름과 원인을 파악하고<br/>
+                  문제 해결에 필요한 모든 방법을 동원하여<br/>
+                  어떻게든 해결방법을 찾아내는 개발자입니다.
                   </p>
-                  <div class="intro-left">
+                  <div class="intro-right">
                       <img src="@/assets/img/icons8-나는-여기있다.-48.png">
                       <img src="@/assets/img/student-64.png">
                       <!-- <span>반갑습니다!</span> -->
@@ -61,7 +61,7 @@
       data() {
           return {
               usedList: [
-                "axios","bootstrap","eslint","express","figma","framer","java","jquery","mariadb","meterialUI","mysql","netlify","next-auth","node.js","react-query","react-router","simple-maps","redux","sass","spring","swiper"
+                "axios","bootstrap","esLint","express","figma","framer","java","jQuery","mariadb","MUI","mySQL","netlify","NextAuth","node.js","react-query","react-router","simple-maps","redux","sass","spring","swiper"
               ]
           }
       },
@@ -181,14 +181,15 @@
                       display: flex;
                       justify-content: space-between;
                       align-items: center;
-                      .intro-left {                        
+                      .intro-right {                        
                           display:flex;
                           flex-direction: column;
                           justify-content: center;
                           align-items: center;
-                          margin-right:1.5vw;
+                          margin-right:2vw;
+                          transform: translateY(-10%);
                           img {
-                              width: 5vw;
+                              width: 4vw;
                           }
                           span {
                               font-size: 1.2vw;
@@ -198,8 +199,8 @@
                       p {
                           // text-align: right;
                           text-align: left;
-                          font-size: 1.8vw;
-                          line-height: 2.2vw;                        
+                          font-size: 1.6vw;
+                          line-height: 2vw;                        
                           // font-size: 1.4vw;
                           // line-height: 2vw;
                       }
@@ -225,28 +226,10 @@
                               padding: 0.4vw;
                               transform: translateX(-0.4vw);
                               color: #555;
-                              
-                              &:hover {
-                                  cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562029/cursor-worm_kij6gi.png');
-                                  // background-color:#F2EFE8;
-                                  transition: 0.35s;
-                              }                            
                               figure {
                                   display: flex;
                                   justify-content: flex-start;
-                                  align-items: center;
-                                  &::after {
-                                  display: block;
-                                  content: "";
-                                  width: 0;
-                                  height: 0;
-                                  border-bottom: 0.4vw solid transparent;
-                                  border-top: 0.4vw solid transparent;
-                                  border-left: 0.5vw solid transparent;
-                                  border-right: 0.6vw solid transparent;
-                                  border-radius: 1.2px;
-                                  transition: 0.4s;
-                                  }                                
+                                  align-items: center;                                                                  
                                   img {
                                       width: 2vw;
                                       margin: 0 1vw 0 0;
@@ -254,6 +237,18 @@
                                   figcaption {
                                       text-align: left;
                                       font-size: 0.9vw;
+                                      &::after {
+                                        display: inline-block;
+                                        content: "";
+                                        width: 0;
+                                        height: 0;
+                                        border-bottom: 0.4vw solid transparent;
+                                        border-top: 0.4vw solid transparent;
+                                        border-left: 0.5vw solid transparent;
+                                        border-right: 0.6vw solid transparent;
+                                        border-radius: 1.2px;
+                                        transition: 0.25s;
+                                        }
                                   }
                               }
                           }
@@ -272,33 +267,33 @@
                                   scale: 1.2;
                               }
                           }
-                          .html:hover > figure::after {                            
+                          .html:hover > figure > figcaption::after {                            
                               border-right-color: rgba(230, 81, 0, 0.8);
                               // background-color: rgba(230, 81, 0, 0.01);
                               // box-shadow: 5px 5px 8px rgba(230, 81, 0, 0.3);
                               }
-                          .css:hover > figure::after, .typescript:hover > figure::after {                            
+                          .css:hover > figure > figcaption::after, .typescript:hover > figure > figcaption::after {                            
                               border-right-color: rgba(2, 119, 189, 0.8);
                               // background-color: rgba(192, 230, 248, 0.08);
                               // box-shadow: 5px 5px 8px rgba(192, 230, 248, 0.9);
                               }
-                          .javascript:hover > figure::after {                            
+                          .javascript:hover > figure > figcaption::after {                            
                               // border-right-color: rgba(247, 223, 30, 1);
                               border-right-color: rgba(250, 200, 17, 1);
                               // background-color: rgba(247, 223, 30, 0.01);
                               // box-shadow: 5px 5px 8px rgba(247, 223, 30, 0.4);
                               }
-                          .react:hover > figure::after {                            
+                          .react:hover > figure > figcaption::after {                            
                               border-right-color: rgba(97, 218, 251, 0.9);
                             //   background-color: rgba(97, 218, 251, 0.01);
                             //   box-shadow: 5px 5px 8px rgba(97, 218, 251, 0.3);
                               }
-                          .next:hover > figure::after, .git:hover > figure::after {                            
+                          .next:hover > figure > figcaption::after, .git:hover > figure > figcaption::after {                            
                               border-right-color: rgba(0, 0, 0, 0.6);
                             //   background-color: rgba(0, 0, 0, 0.01);
                             //   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
                               }
-                          .vue:hover > figure::after {                            
+                          .vue:hover > figure > figcaption::after {                            
                               border-right-color: rgba(65, 184, 131, 0.8);
                             //   background-color: rgba(65, 184, 131, 0.01);
                             //   box-shadow: 5px 5px 8px rgba(65, 184, 131, 0.3);
@@ -309,65 +304,81 @@
                         flex-wrap: wrap;
                         position: relative;
                         li {
-                            padding: 0.7vw;
+                            padding: 0.4vw;
                             position: relative;
-                            opacity: 0.7;
-                            // transition: 0.2s;
+                            opacity: 0.6;
+                            // transition: 0.3s;
                             border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            &:hover {
+                                opacity: 1;
+                                box-shadow: 0.2px 0.2px 35px rgba(0, 0, 0, 0.2);
+                            }
                             &::before,&::after {
                                 z-index: 99;
-                            }
-                            &:hover:after{
-                                content: attr(data-tooltip);
-                                text-align: center;
-                                background-color: #000;
-                                color:#fff;
-                                padding:6px 14px;
-                                white-space: nowrap;
-                                font-size:12px;
-                                position: absolute;
-                                bottom: 0%;
-                                left: 0%;
-                                transform: translateY(130%);
-                                border-radius: 40px;
-                                transition: 0.5s;
                             }
                             &:hover::before {
                                 content: "";
                                 display: block;
                                 width: 0;
                                 height: 0;
-                                border-bottom: 6px solid black;
-                                border-top: 6px solid transparent;
-                                border-left: 6px solid transparent;
-                                border-right: 6px solid transparent;
+                                border-bottom: 0.3vw solid black;
+                                border-top: 0.3vw solid transparent;
+                                border-left: 0.3vw solid transparent;
+                                border-right: 0.3vw solid transparent;
                                 border-radius: 1.2px;
                                 position: absolute;
-                                bottom: 25%;
+                                bottom: 0;
                                 left: 50%;
-                                transform: translateY(130%);
-                                transition: 0.5s;
+                                transform: translate(-50%, 70%);
+                                // transition: 0.5s;
                             }
-                            &:hover {
-                                // transition: 0.2s;
-                                opacity: 1;
-                                box-shadow: 0.2px 0.2px 35px rgba(0, 0, 0, 0.2);
-                            }
-                            &:hover:after {
+                            &:hover:after{
+                                content: attr(data-tooltip);
                                 display: block;
+                                text-align: center;
+                                background-color: #000;
+                                color:#fff;
+                                padding:0.25vw 0.6vw;
+                                white-space: nowrap;
+                                font-size:0.5vw;
+                                position: absolute;
+                                bottom: 0%;
+                                left: 50%;
+                                transform: translate(-50%, 130%);
+                                border-radius: 40px;
+                                text-transform: capitalize;
                             }
-                            // &:hover:after {
-                            //     display: block;
-                            //     content: attr(data-tooltip);
-                            //     position: absolute;
-                            //     top: 0;
-                            //     left: 0;
-                            //     text-align: center;
-                            //     border: 1px solid coral;
-                            // }
                             img {
                                 width: 2vw;
                                 height: 2vw;
+                            }
+                        }
+                        .axios > img {
+                            scale: 1.2;
+                        }
+                        .figma, .framer, .NextAuth {
+                            img {
+                                scale: 0.8;
+                                transform: translateY(5%);
+                            }
+                        }
+                        .netlify, .react-query {
+                            img {
+                                scale: 0.9;
+                            }
+                        }
+                        .express, .jQuery, .swiper {
+                            img {
+                                scale: 0.83;
+                            }
+                        }
+                        .react-router , .redux {
+                            img {
+                                scale: 0.9;
+                                transform: translateY(-5%);
                             }
                         }
                     }

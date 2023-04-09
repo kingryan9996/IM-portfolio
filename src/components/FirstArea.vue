@@ -92,7 +92,7 @@
         <ul>            
             <li><span>Address : 서울시 관악구</span></li>
             <li><span><a href="mailto:kingryan9996@gmail.com">Email : kingryan9996@gmail.com</a></span></li>
-            <li><span><a href='tel:010-9996-5765'>Phone : 010-9996-5765</a></span></li>
+            <!-- <li><span><a href='tel:010-9996-5765'>Phone : 010-9996-5765</a></span></li> -->
             <li class="sns-link">
               <span>
                 <a target="_blank" href="https://velog.io/@kingryan9996">
@@ -214,7 +214,7 @@ export default {
     top: 32.5%;
     left: 13.8%;
     font-size: 40px;
-    color: #4BDFFA;
+    color: #4be0faec;
     opacity: 0;
     animation-name: h1OPacity;
     animation-duration: 3.2s;
@@ -230,7 +230,10 @@ export default {
     opacity: 0;
     animation-name: h1OPacity;
     animation-duration: 3.2s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;    
+    &::first-letter {
+      color: red;
+    }
   }
   @keyframes h1OPacity
    {

@@ -214,6 +214,11 @@ export default {
                             fill: #FFF;
                             stroke: #000;
                         }
+                        &:hover svg > g > path:nth-child(1) {
+                            stroke: #000;
+                            stroke-width: 0.01;
+                        }
+
                 }
                 .work-link {
                     svg {
@@ -231,7 +236,7 @@ export default {
         align-items: center;
         .third-right-items {
             width: 100%;
-            transform: translateY(-4%);
+            transform: translateY(-3%);
             li {   
                 position: sticky;
                 top:14vw;
