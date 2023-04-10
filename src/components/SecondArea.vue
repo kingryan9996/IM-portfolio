@@ -8,7 +8,7 @@
               </div>
           </div>
           <div class="my-photo">
-              <img src="@/assets/img/profile.jpg">
+              <img src="@/assets/img/profile.png">
               <img class="my-sign" src="@/assets/img/sign1.svg"/>
           </div>
       </div>
@@ -155,6 +155,7 @@
               z-index: 2;
               img {
                   width: 100%;
+                  filter: brightness(90%);
               }
               .my-sign {
                   position: absolute;
