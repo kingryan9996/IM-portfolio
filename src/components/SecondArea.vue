@@ -333,7 +333,7 @@
                                 left: 50%;
                                 transform: translate(-50%, 70%);
                                 // transition: 0.5s;
-                                // img??
+                                // img????
                             }
                             &:hover:after{
                                 content: attr(data-tooltip);
