@@ -1,0 +1,444 @@
+@import "./mixin";
+
+// 기본css
+.first-area-wrap {
+  padding: 7% 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-color: #0338d6;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  h1::before {
+    content: "I";
+    display: block;
+    position: absolute;
+    top: 32.5%;
+    left: 13.8%;
+    font-size: 40px;
+    color: #4be0faec;
+    opacity: 0;
+    animation-name: h1OPacity;
+    animation-duration: 3.2s;
+    animation-fill-mode: forwards;
+  }
+  h1::after {
+    content: "'M 승환";
+    display: block;
+    position: absolute;
+    top: 31.5%;
+    left: 15%;
+    font-size: 40px;
+    opacity: 0;
+    animation-name: h1OPacity;
+    animation-duration: 3.2s;
+    animation-fill-mode: forwards;
+    &::first-letter {
+      color: red;
+    }
+  }
+  @keyframes h1OPacity {
+    95% {
+      opacity: 0;
+    }
+    96% {
+      opacity: 0.25;
+    }
+    97% {
+      opacity: 0.5;
+    }
+    98% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  h1 {
+    margin-top: 10%;
+    scale: 1.3;
+    // 미니멈 0.45
+    position: relative;
+    span {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 200px;
+    }
+    p {
+      padding-left: 3%;
+      text-align: left;
+      font-size: 30px;
+      color: #999999;
+      color: red;
+    }
+    .svg-path {
+      display: flex;
+      .svg-text-wrap {
+        width: 700px;
+        .svg-portfolio {
+          text-align: left;
+          font-size: 140px;
+          height: 140px;
+          .text-svg {
+            width: 80px;
+            height: 140px;
+            font-weight: 700;
+            &.active3d {
+              animation-name: svg-hover-action;
+              animation-duration: 750ms;
+              animation-iteration-count: 1;
+            }
+
+            @keyframes svg-hover-action {
+              0% {
+                transform: scale3d(1, 1, 1);
+              }
+              30% {
+                transform: scale3d(1.1, 0.75, 1);
+              }
+              40% {
+                transform: scale3d(0.75, 1.25, 1);
+              }
+              50% {
+                transform: scale3d(1.075, 0.85, 1);
+              }
+              65% {
+                transform: scale3d(0.95, 1.05, 1);
+              }
+              75% {
+                transform: scale3d(1.025, 0.95, 1);
+              }
+              100% {
+                transform: scale3d(1, 1, 1);
+              }
+            }
+            text {
+              fill: none;
+              opacity: 0;
+            }
+          }
+          .p {
+            width: 88px;
+          }
+          .o {
+            width: 82px;
+          }
+          .r {
+            width: 58px;
+          }
+          .t {
+            width: 53px;
+          }
+          .f {
+            width: 54px;
+          }
+          .l,
+          .i {
+            width: 35px;
+          }
+        }
+        .svg-Front {
+          text-align: right;
+          font-size: 160px;
+          .text-svg {
+            width: 80px;
+            height: 150px;
+            font-weight: 700;
+            &.active3d {
+              animation-name: svg-hover-action;
+              animation-duration: 750ms;
+              animation-iteration-count: 1;
+            }
+
+            @keyframes svg-hover-action {
+              0% {
+                transform: scale3d(1, 1, 1);
+              }
+              30% {
+                transform: scale3d(1.1, 0.75, 1);
+              }
+              40% {
+                transform: scale3d(0.75, 1.25, 1);
+              }
+              50% {
+                transform: scale3d(1.075, 0.85, 1);
+              }
+              65% {
+                transform: scale3d(0.95, 1.05, 1);
+              }
+              75% {
+                transform: scale3d(1.025, 0.95, 1);
+              }
+              100% {
+                transform: scale3d(1, 1, 1);
+              }
+            }
+            text {
+              fill: #fff;
+              opacity: 0;
+            }
+          }
+          .F {
+            width: 95px;
+          }
+          .r {
+            width: 65px;
+          }
+          .o {
+            width: 95px;
+          }
+          .n {
+            width: 95px;
+          }
+          .t {
+            width: 60px;
+          }
+          .And {
+            width: 35px;
+          }
+        }
+      }
+      .svg-And {
+        font-size: 400px;
+        transform: translateY(-2.5%);
+        .text-svg {
+          width: 280px;
+          height: 400px;
+          font-weight: 300;
+          &.active3d {
+            animation-name: svg-hover-action;
+            animation-duration: 750ms;
+            animation-iteration-count: 1;
+          }
+          @keyframes svg-hover-action {
+            0% {
+              transform: scale3d(1, 1, 1);
+            }
+            30% {
+              transform: scale3d(1.1, 0.75, 1);
+            }
+            40% {
+              transform: scale3d(0.75, 1.25, 1);
+            }
+            50% {
+              transform: scale3d(1.075, 0.85, 1);
+            }
+            65% {
+              transform: scale3d(0.95, 1.05, 1);
+            }
+            75% {
+              transform: scale3d(1.025, 0.95, 1);
+            }
+            100% {
+              transform: scale3d(1, 1, 1);
+            }
+          }
+          text {
+            fill: #fff;
+            opacity: 0;
+          }
+        }
+      }
+    }
+    @keyframes svg-text-anim {
+      0% {
+        fill: transparent;
+      }
+      20% {
+        opacity: 0.2;
+      }
+      40% {
+        stroke-dashoffset: 0;
+        opacity: 0.4;
+      }
+      60% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 20;
+        opacity: 0.6;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+        opacity: 1;
+      }
+    }
+  }
+  .sns-line {
+    position: absolute;
+    left: 3%;
+    bottom: 3%;
+    z-index: 2;
+    ul {
+      li:nth-child(2) {
+        margin: 0.1vw 0;
+      }
+      li {
+        font-size: 12px;
+        text-align: left;
+        line-height: 15px;
+        span {
+          opacity: 0.6;
+          a {
+            color: #fff;
+          }
+        }
+        span:hover {
+          opacity: 1;
+        }
+      }
+      .sns-link {
+        display: flex;
+        margin: 6% 0 0 -5px;
+        span {
+          scale: 1.1;
+        }
+        span:nth-child(2) {
+          margin: 0 0.5vw;
+        }
+        span:hover > a > svg > g {
+          fill: #fff;
+          transition: 0.2s;
+        }
+        span:hover > a > svg {
+          fill: #fff;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+}
+
+// 데스크탑 1800 ~
+@include desktop {
+  .first-area-wrap {
+    h1 {
+      scale: 1.3;
+    }
+  }
+}
+
+// 노트북에서 데스크탑 1500 ~ 1799
+@include desktopToLaptop {
+  .first-area-wrap {
+    h1 {
+      scale: 1.2;
+    }
+    .sns-line {
+      scale: 0.92;
+      left: 2.5%;
+      bottom: 2.9%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.9) translateY(7%);
+    }
+  }
+}
+
+// 1280 ~ 1499
+@include laptopLarge {
+  .first-area-wrap {
+    h1 {
+      scale: 1.1;
+    }
+    .sns-line {
+      scale: 0.85;
+      left: 2%;
+      bottom: 2.8%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.8) translateY(15%);
+    }
+  }
+}
+
+// 노트북 1024 ~ 1279
+@include laptop {
+  .first-area-wrap {
+    h1 {
+      scale: 1;
+    }
+    .sns-line {
+      scale: 0.77;
+      left: 1.5%;
+      bottom: 2.6%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.7) translateY(23%);
+    }
+  }
+}
+
+// 태블릿에서 노트북 960 ~ 1023
+@include laptopToTablet {
+  .first-area-wrap {
+    h1 {
+      scale: 0.9;
+    }
+    .sns-line {
+      scale: 0.7;
+      left: 1%;
+      bottom: 2.3%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.7) translateY(31%);
+    }
+  }
+}
+
+// 태블릿 720 ~ 959
+@include tablet {
+  .first-area-wrap {
+    h1 {
+      scale: 0.7;
+    }
+    .sns-line {
+      scale: 0.6;
+      left: -1%;
+      bottom: 2%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.6) translateY(35%);
+    }
+  }
+}
+
+// 모바일에서 태블릿 535 ~ 719
+@include tabletToMobile {
+  .first-area-wrap {
+    h1 {
+      scale: 0.5;
+    }
+    .sns-line {
+      scale: 0.55;
+      left: -3%;
+      bottom: 1.5%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.57) translateY(40%);
+    }
+  }
+}
+
+// 모바일 320 ~ 534
+@include mobile {
+  .first-area-wrap {
+    height: 290px;
+    h1 {
+      scale: 0.3;
+      transform: translateY(15%);
+    }
+    .sns-line {
+      scale: 0.5;
+      left: -6%;
+      bottom: 1%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.5) translateY(50%);
+    }
+  }
+}

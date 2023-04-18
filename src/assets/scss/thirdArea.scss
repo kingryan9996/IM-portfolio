@@ -1,0 +1,136 @@
+@import "./mixin";
+
+.third-area-wrap {
+  padding: 20% 11.5% 10%;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #fff;
+  .third-left {
+    width: 40%;
+    padding-left: 10%;
+    position: sticky;
+    top: 10%;
+    .section-02 {
+      height: 100%;
+      position: absolute;
+      top: 18%;
+      left: -10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      .section-number {
+        font-size: 4vw;
+        font-weight: 700;
+        position: static;
+        background-color: #000;
+        z-index: 1;
+      }
+      .section-title {
+        position: relative;
+        transform: rotateZ(270deg);
+        font-size: 1.6vw;
+        font-weight: 400;
+      }
+    }
+    .work-description {
+      width: 100%;
+      padding: 2vw 2vw 0 0;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      text-align: left;
+      h3 {
+        font-size: 3vw;
+      }
+      p {
+        margin-top: 1.7vw;
+        margin-bottom: 7.5vw;
+        font-size: 1vw;
+      }
+      .link-wrap {
+        display: flex;
+        flex-direction: column;
+        a {
+          display: flex;
+          align-items: center;
+          color: #fff;
+          &:hover svg {
+            fill: #000;
+            stroke: #fff;
+          }
+          &:hover svg > g > path {
+            fill: #fff;
+            stroke: #000;
+          }
+          &:hover svg > g > path:nth-child(1) {
+            stroke: #000;
+            stroke-width: 0.01;
+          }
+        }
+        .work-link {
+          svg {
+            scale: 1.7;
+          }
+        }
+      }
+    }
+  }
+  .third-right {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .third-right-items {
+      width: 100%;
+      transform: translateY(-3%);
+      li {
+        position: sticky;
+        top: 14vw;
+        img {
+          width: 100%;
+          // --p: width;
+          // height:  calc(var(--p) * 0.3px);
+          // height:  calc(var($p) * 10px);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}
+
+// 데스크탑 1800 ~
+@include desktop {
+}
+
+// 노트북에서 데스크탑 1500 ~ 1799
+@include desktopToLaptop {
+}
+
+// 1280 ~ 1499
+@include laptopLarge {
+}
+
+// 노트북 1024 ~ 1279
+@include laptop {
+}
+
+// 태블릿에서 노트북 960 ~ 1023
+@include laptopToTablet {
+}
+
+// 태블릿 720 ~ 959
+@include tablet {
+}
+
+// 모바일에서 태블릿 535 ~ 719
+@include tabletToMobile {
+}
+
+// 모바일 320 ~ 534
+@include mobile {
+}

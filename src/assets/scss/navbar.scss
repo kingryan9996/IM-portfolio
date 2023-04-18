@@ -1,0 +1,343 @@
+@import "./mixin";
+
+.navbar-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  .first-line {
+    position: fixed;
+    top: 5%;
+    left: 3%;
+    h2::before {
+      display: block;
+      content: "";
+      width: 1.4rem;
+      height: 1.4rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform: translate(-30%, -5%);
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .blueW::before {
+      border: 1.5px solid #fff;
+    }
+    .blueW {
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        color: #0338d6;
+        -webkit-text-stroke: 0.5px #fff;
+      }
+      &:hover::before {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-color: #0338d6;
+      }
+    }
+    .blackW::before {
+      border: 1.5px solid #000;
+    }
+    .blackW {
+      color: #000;
+      &:hover {
+        cursor: pointer;
+        color: #fff;
+        -webkit-text-stroke: 1.5px #000;
+      }
+      &:hover::before {
+        background-color: rgba(0, 0, 0, 0.95);
+        border-color: #fff;
+      }
+    }
+    .Wblack::before {
+      border: 1.5px solid #fff;
+    }
+    .Wblack {
+      color: #fff;
+      &:hover {
+        cursor: pointer;
+        color: #000;
+        -webkit-text-stroke: 0.5px #fff;
+      }
+      &:hover::before {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-color: #fff;
+      }
+    }
+  }
+  .hamburger::before {
+    display: block;
+    content: "";
+    position: fixed;
+    width: 11vw;
+    min-width: 103px;
+    border-bottom: 1px solid;
+    bottom: 0;
+    left: 150%;
+    // transform: translateX(150%);
+    animation-name: hamBeforeArrow;
+    animation-duration: 10s;
+    animation-delay: 3.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  .hamburger::after {
+    display: block;
+    content: "";
+    position: fixed;
+    width: 1.5vw;
+    min-width: 15px;
+    border-bottom: 1px solid;
+    bottom: 0.5vw;
+    left: 238%;
+    //반응형 500기준 245%로 변경요망
+    transform: rotateZ(45deg);
+    animation-name: hamAfterArrow;
+    animation-duration: 10s;
+    animation-delay: 3.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  @keyframes hamBeforeArrow {
+    0% {
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    100% {
+    }
+  }
+  @keyframes hamAfterArrow {
+    0% {
+    }
+    50% {
+      transform: translateX(50px) rotateZ(45deg);
+    }
+    100% {
+    }
+  }
+  .hamburger {
+    position: fixed;
+    // top: 20%;
+    // right: -3%;
+    display: flex;
+    justify-content: space-between;
+    width: 11vw;
+    min-width: 103px;
+    transform: rotateZ(90deg);
+    color: #fff;
+    li {
+      font-size: 0.8vw;
+      text-align: left;
+      text-transform: uppercase;
+      opacity: 0.5;
+      // mix-blend-mode: difference;
+      font-weight: 700;
+      &.active {
+        // color:#4BDFFA;
+        animation-name: hamListScale;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+        mix-blend-mode: difference;
+      }
+      @keyframes hamListScale {
+        to {
+          opacity: 1;
+          text-decoration: line-through 1.5px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    li:nth-child(2) {
+      margin: 0;
+    }
+  }
+  .btn-goTop {
+    position: fixed;
+    right: 1%;
+    bottom: 4.5%;
+    width: 1.5vw;
+    height: 1.5vw;
+    cursor: pointer;
+    animation-name: goTopAni;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    @keyframes goTopAni {
+      // 0% {}
+      25% {
+        transform: scale3d(0.9, 1.15, 1);
+      }
+      50% {
+        transform: scale3d(1, 1, 1) translateY(-20%);
+      }
+      70% {
+        transform: scale3d(0.9, 1.15, 1);
+      }
+      // 100% {}
+    }
+    &:hover {
+      animation-name: goTopAniStop;
+    }
+    &:hover svg {
+      // fill: skyblue;
+      stroke: #000;
+    }
+    &:hover .arr02 {
+      transition: 0.7s;
+      transform: translateY(20%) rotateZ(-90deg);
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotateZ(-90deg);
+      fill: skyblue;
+      stroke-width: 0.3;
+      // path {
+      //     stroke-width:.5;
+      //     // stroke: #FFF;
+      // }
+    }
+  }
+}
+
+// 데스크탑 1800 ~
+@include desktop {
+  .first-line {
+    scale: 1;
+  }
+  .hamburger {
+    top: 20%;
+    right: -3%;
+  }
+}
+
+// 노트북에서 데스크탑 1500 ~ 1799
+@include desktopToLaptop {
+  .first-line {
+    scale: 0.92;
+    transform: translateY(-40%);
+  }
+  .hamburger {
+    top: 18%;
+    right: -3%;
+  }
+}
+
+// 1280 ~ 1499
+@include laptopLarge {
+  .first-line {
+    scale: 0.85;
+    transform: translateY(-60%);
+  }
+  .hamburger {
+    top: 16%;
+    right: -3%;
+  }
+}
+
+// 노트북 1024 ~ 1279
+@include laptop {
+  .first-line {
+    scale: 0.78;
+    transform: translateY(-80%);
+  }
+  .hamburger::before {
+    scale: 0.97;
+  }
+  .hamburger::after {
+    scale: 0.95;
+    padding-bottom: 0.5%;
+  }
+  .hamburger {
+    top: 14%;
+    right: -3%;
+  }
+}
+
+// 태블릿에서 노트북 960 ~ 1023
+@include laptopToTablet {
+  .first-line {
+    scale: 0.71;
+    transform: translateY(-100%);
+  }
+  .hamburger::before {
+    scale: 0.97;
+  }
+  .hamburger::after {
+    scale: 0.95;
+    padding-bottom: 0.5%;
+  }
+  .hamburger {
+    top: 14%;
+    right: -3%;
+  }
+}
+
+// 태블릿 720 ~ 959
+@include tablet {
+  .first-line {
+    scale: 0.64;
+    transform: translateY(-120%);
+  }
+  .hamburger::before {
+    scale: 0.95;
+  }
+  .hamburger::after {
+    scale: 0.95;
+    padding-bottom: 8.5%;
+  }
+  .hamburger {
+    top: 14%;
+    right: -3%;
+  }
+}
+
+// 모바일에서 태블릿 535 ~ 719
+@include tabletToMobile {
+  .first-line {
+    scale: 0.57;
+    transform: translateY(-140%);
+  }
+  .hamburger::before {
+    scale: 0.92;
+  }
+  .hamburger::after {
+    scale: 0.95;
+    padding-bottom: 12%;
+  }
+  .hamburger {
+    top: 12%;
+    right: -5.5%;
+  }
+}
+
+// 모바일 320 ~ 534
+@include mobile {
+  .first-line {
+    scale: 0.5;
+    transform: translateY(-180%);
+  }
+  .hamburger::before {
+    scale: 0.91;
+  }
+  .hamburger::after {
+    scale: 0.95;
+    padding-bottom: 15%;
+  }
+  .hamburger {
+    top: 7%;
+    right: -7%;
+  }
+}
