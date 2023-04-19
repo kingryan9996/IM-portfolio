@@ -95,10 +95,15 @@
   
               // console.log(leftSideImg.clientHeight)
               
-              
-              if (matchMedia("screen and (max-width: 534px)").matches) {
-                  leftSide01Div.style = `
-                  height: ${leftSideImg.clientHeight * 2.5 }px`
+                if (matchMedia("screen and (max-width: 334px)").matches) {
+                    leftSide01Div.style = `
+                height: ${leftSideImg.clientHeight * 3 }px`
+                } else if (matchMedia("screen and (max-width: 390px)").matches) {
+                leftSide01Div.style = `
+                height: ${leftSideImg.clientHeight * 2.5 }px`
+                } else if (matchMedia("screen and (max-width: 534px)").matches) {
+                leftSide01Div.style = `
+                height: ${leftSideImg.clientHeight * 2.2 }px`
                 } else {                    
                     leftSide01Div.style = `
                     height: ${leftSideImg.clientHeight * 0.9 }px`

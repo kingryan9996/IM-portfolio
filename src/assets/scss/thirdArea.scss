@@ -243,7 +243,7 @@
 }
 
 // 모바일 0 ~ 334
-@include mobile {
+@include mobileSmall {
   .third-area-wrap{
     display: block;
     .third-left {
@@ -251,6 +251,7 @@
       z-index: 0;
       .section-02 {
         transform: translateY(-35%);
+        left: -14%;
       }
       .work-description {
         display: none;
