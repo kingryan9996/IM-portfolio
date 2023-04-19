@@ -74,7 +74,7 @@
     }
   }
   .hamburger::before {
-    display: block;
+    // display: block;
     content: "";
     position: fixed;
     width: 11vw;
@@ -90,7 +90,7 @@
     animation-iteration-count: infinite;
   }
   .hamburger::after {
-    display: block;
+    // display: block;
     content: "";
     position: fixed;
     width: 1.5vw;
@@ -127,7 +127,7 @@
   .hamburger {
     position: fixed;
     right: -35px;
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     width: 11vw;
     min-width: 103px;
@@ -218,6 +218,13 @@
   }
   .hamburger {
     top: max(23%,80px);
+    display: flex;
+    &::before {
+      display: block;
+    }
+    &::after {
+      display: block;
+    }
   }
 }
 
@@ -229,6 +236,13 @@
   }
   .hamburger {
     top: max(21%,80px);
+    display: flex;
+    &::before {
+      display: block;
+    }
+    &::after {
+      display: block;
+    }
   }
 }
 
@@ -240,6 +254,13 @@
   }
   .hamburger {
     top: max(18%,80px);
+    display: flex;
+    &::before {
+      display: block;
+    }
+    &::after {
+      display: block;
+    }
   }
 }
 
@@ -249,15 +270,18 @@
     scale: 0.78;
     transform: translateY(-80%);
   }
-  .hamburger::before {
-    scale: 0.97;
-  }
-  .hamburger::after {
-    scale: 0.95;
-    padding-bottom: 0.5%;
-  }
   .hamburger {
     top: max(16%,80px);
+    display: flex;
+    &::before {
+      display: block;
+      scale: 0.97;
+    }
+    &::after {
+      display: block;
+      scale: 0.95;
+      padding-bottom: 0.5%;
+    }
   }
 }
 
@@ -267,15 +291,18 @@
     scale: 0.71;
     transform: translateY(-100%);
   }
-  .hamburger::before {
-    scale: 0.97;
-  }
-  .hamburger::after {
-    scale: 0.95;
-    padding-bottom: 0.5%;
-  }
   .hamburger {
     top: max(14%,80px);
+    display: flex;
+    &::before {
+      display: block;
+      scale: 0.97;
+    }
+    &::after {
+      display: block;
+      scale: 0.95;
+      padding-bottom: 0.5%;
+    }
   }
 }
 
@@ -285,15 +312,18 @@
     scale: 0.64;
     transform: translateY(-120%);
   }
-  .hamburger::before {
-    scale: 0.95;
-  }
-  .hamburger::after {
-    scale: 0.95;
-    padding-bottom: 8.5%;
-  }
   .hamburger {
     top: max(14%,80px);
+    display: flex;
+    &::before {
+      display: block;
+      scale: 0.97;
+    }
+    &::after {
+      display: block;
+      scale: 0.95;
+      padding-bottom: 0.5%;
+    }
   }
 }
 
@@ -303,15 +333,18 @@
     scale: 0.57;
     transform: translateY(-140%);
   }
-  .hamburger::before {
-    scale: 0.92;
-  }
-  .hamburger::after {
-    scale: 0.95;
-    padding-bottom: 12%;
-  }
   .hamburger {
     top: max(12%,80px);
+    display: flex;
+    &::before {
+      display: block;
+      scale: 0.92;
+    }
+    &::after {
+      display: block;
+      scale: 0.95;
+      padding-bottom: 12%;
+    }
   }
 }
 
@@ -321,14 +354,13 @@
     scale: 0.5;
     transform: translateY(-180%);
   }
-  .hamburger::before {
-    scale: 0.91;
-  }
-  .hamburger::after {
-    scale: 0.95;
-    padding-bottom: 15%;
-  }
   .hamburger {
-    top: max(7%,80px);
+    display: none;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
   }
 }

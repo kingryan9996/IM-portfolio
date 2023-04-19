@@ -11,6 +11,20 @@
               <img src="@/assets/img/profile.png">
               <img class="my-sign" src="@/assets/img/sign1.svg"/>
           </div>
+          <div class="photo-right">
+            <ul>
+                <li><p>Name : 임승환</p></li>
+                <li><p>Birth : 1994.01.29</p></li>
+                <li><p>Address : 서울시 관악구</p></li>
+                <li><p>Email : kingryan9996@gmail.com</p></li>            
+            </ul>
+            <p><strong>저를 소개하자면</strong><br/>
+            문제가 발생하면 잠시 물러납니다.<br/>
+            실수로 놓치고 있던 것들을 탐색하고<br/>
+            필요한 방법을 검색해서 다시 접근합니다.<br/>
+            저는 이렇게 문제를 해결하는 개발자입니다.
+            </p>
+        </div>          
       </div>
       <div class="second-right">
           <div class="about-intro">
@@ -84,7 +98,7 @@
               
               if (matchMedia("screen and (max-width: 534px)").matches) {
                   leftSide01Div.style = `
-                  height: ${leftSideImg.clientHeight * 1.2 }px`
+                  height: ${leftSideImg.clientHeight * 2.5 }px`
                 } else {                    
                     leftSide01Div.style = `
                     height: ${leftSideImg.clientHeight * 0.9 }px`
@@ -96,7 +110,7 @@
               chapterBorder.style = `
               position: absolute;
               border-top: 1px solid #000;
-              width: ${leftSideImg.clientHeight / 2.2}px;
+              width: ${leftSideImg==true?(leftSideImg.clientHeight / 2.2):120}px;
               top: 50%;
               left: 110%;
               transform: translateY(-50%);`

@@ -14,7 +14,7 @@
     position: sticky;
     top: 10%;
     .section-02 {
-      height: 100%;
+      height: 80%;
       position: absolute;
       top: 18%;
       left: -10%;
@@ -85,6 +85,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // .section-02 {
+    //   position: absolute;
+    //   top: 9%;
+    //   left: -10%;
+    //   display: none;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   align-content: center;
+    //   .section-number {
+    //     font-size: 4vw;
+    //     font-weight: 700;
+    //     position: static;
+    //     background-color: #000;
+    //     z-index: 1;
+    //   }
+    //   .section-title {
+    //     position: relative;
+    //     transform: rotateZ(270deg);
+    //     font-size: 1.6vw;
+    //     font-weight: 400;
+    //   }
+    // }
     .third-right-items {
       width: 100%;
       transform: translateY(-3%);
@@ -97,6 +119,9 @@
           // height:  calc(var(--p) * 0.3px);
           // height:  calc(var($p) * 10px);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+        .mobile-description {
+          display: none;
         }
       }
     }
@@ -126,27 +151,31 @@
 // 태블릿 720 ~ 959
 @include tablet {
   .third-area-wrap{
+    display: block;
     .third-left {
-      width: 45%;
+      // display: none;
+      position: absolute;
+      z-index: 0;
+      .section-02 {
+        transform: translateY(-30%);
+      }
       .work-description {
-        p {
-          margin-bottom: 10vw;
-        }
-        .link-wrap {
-          a {
-            svg {
-              width: 26px;
-              height: 26px;
-            }
-            span {
-              font-size: 1.8vw;
-            }
-          }
-        }
+        display: none;
       }
     }
     .third-right {
-      width: 55%;
+      width: 100%;
+      padding-left: 10%;      
+      .third-right-items {
+        transform: translateY(0);
+        li {
+          position: static;
+          .mobile-description {
+            display: block;
+            height: 200px;
+          }
+        }
+      }
     }
   }
 }
@@ -154,55 +183,61 @@
 // 모바일에서 태블릿 535 ~ 719
 @include tabletToMobile {
   .third-area-wrap{
+    display: block;
     .third-left {
-      width: 50%;
+      position: absolute;
+      z-index: 0;
+      .section-02 {
+        transform: translateY(-30%);
+      }
       .work-description {
-        p {
-          margin-bottom: 7vw;
-        }
-        .link-wrap {
-          a {
-            svg {
-              width: 22px;
-              height: 22px;
-            }
-            span {
-              font-size: 1.6vw
-            }
-          }
-        }
+        display: none;
       }
     }
     .third-right {
-      width: 50%;
+      width: 100%;
+      padding-left: 10%;
+      .third-right-items {
+        transform: translateY(0);
+        li {
+          position: static;
+          .mobile-description {
+            display: block;
+            height: 165px;
+          }
+        }
+      }
     }
   }
 }
 
 // 모바일 320 ~ 534
 @include mobile {
-  .third-area-wrap {
+  .third-area-wrap{
+    display: block;
     .third-left {
-      width: 50%;
+      position: absolute;
+      z-index: 0;
+      .section-02 {
+        transform: translateY(-35%);
+      }
       .work-description {
-        p {
-          margin-bottom: 5vw;
-        }
-        .link-wrap {
-          a {
-            svg {
-              width: 18px;
-              height: 18px;
-            }
-            span {
-              font-size: 1.4vw
-            }
-          }
-        }
+        display: none;
       }
     }
     .third-right {
-      width: 50%;
+      width: 100%;
+      padding-left: 10%;
+      .third-right-items {
+        transform: translateY(0);
+        li {
+          position: static;
+          .mobile-description {
+            display: block;
+            height: 130px;
+          }
+        }
+      }
     }
   }
 }
