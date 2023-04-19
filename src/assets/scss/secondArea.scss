@@ -341,17 +341,59 @@
 
 // 태블릿 720 ~ 959
 @include tablet {
+  .second-area-wrap {
+    .second-right {
+      .about-intro {
+        .intro-main {
+          line-height: 1.7vw;
+        }
+      }
+    }
+  }
 }
 
 // 모바일에서 태블릿 535 ~ 719
 @include tabletToMobile {
+  .second-area-wrap {
+    .second-right {
+      .about-intro {
+        .intro-main {
+          line-height: 1.9vw;
+        }
+      }
+    }
+  }
 }
 
 // 모바일 320 ~ 534
 @include mobile {
   .second-area-wrap {
+    .second-left{
+      width: 30%;
+      .my-photo {
+        .my-sign {
+          transform: translate(100%, 50%);
+        }
+      }
+    }
     .second-right {
+      width: 70%;
       .about-intro {
+        .intro-first {
+          margin-bottom: 4vw;
+          p {
+          font-size: 2.8vw;
+          line-height: 3.2vw;
+          white-space: nowrap;
+          }
+          img {
+            display: none;
+          }
+        }
+        .intro-main {
+          line-height: 2.8vw;
+          opacity: 0.7;
+        }
       }
       .about-skill {
         .second-right-items {

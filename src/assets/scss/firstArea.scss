@@ -2,7 +2,6 @@
 
 // 기본css
 .first-area-wrap {
-  padding: 7% 180px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -316,6 +315,7 @@
 // 데스크탑 1800 ~
 @include desktop {
   .first-area-wrap {
+    height: 950px;
     h1 {
       scale: 1.3;
     }
@@ -325,8 +325,10 @@
 // 노트북에서 데스크탑 1500 ~ 1799
 @include desktopToLaptop {
   .first-area-wrap {
+    height: 855px;
     h1 {
       scale: 1.2;
+      transform: translateY(1%);
     }
     .sns-line {
       scale: 0.92;
@@ -342,8 +344,10 @@
 // 1280 ~ 1499
 @include laptopLarge {
   .first-area-wrap {
+    height: 760px;
     h1 {
       scale: 1.1;
+      transform: translateY(3%);
     }
     .sns-line {
       scale: 0.85;
@@ -359,8 +363,10 @@
 // 노트북 1024 ~ 1279
 @include laptop {
   .first-area-wrap {
+    height: 635px;
     h1 {
-      scale: 1;
+      scale: 0.95;
+      transform: translateY(5%);
     }
     .sns-line {
       scale: 0.77;
@@ -376,8 +382,10 @@
 // 태블릿에서 노트북 960 ~ 1023
 @include laptopToTablet {
   .first-area-wrap {
+    height: 540px;
     h1 {
-      scale: 0.9;
+      scale: 0.85;
+      transform: translateY(7%);
     }
     .sns-line {
       scale: 0.7;
@@ -393,8 +401,10 @@
 // 태블릿 720 ~ 959
 @include tablet {
   .first-area-wrap {
+    height: 445px;
     h1 {
       scale: 0.7;
+      transform: translateY(9%);
     }
     .sns-line {
       scale: 0.6;
@@ -410,8 +420,10 @@
 // 모바일에서 태블릿 535 ~ 719
 @include tabletToMobile {
   .first-area-wrap {
+    height: 350px;
     h1 {
       scale: 0.5;
+      transform: translateY(10%);
     }
     .sns-line {
       scale: 0.55;
@@ -429,8 +441,8 @@
   .first-area-wrap {
     height: 290px;
     h1 {
-      scale: 0.3;
-      transform: translateY(15%);
+      scale: 0.35;
+      transform: translateY(10%);
     }
     .sns-line {
       scale: 0.5;

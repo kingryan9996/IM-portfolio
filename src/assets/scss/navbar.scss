@@ -11,7 +11,7 @@
   left: 0;
   .first-line {
     position: fixed;
-    top: 5%;
+    top: max(5%, 40px);
     left: 3%;
     h2::before {
       display: block;
@@ -126,8 +126,7 @@
   }
   .hamburger {
     position: fixed;
-    // top: 20%;
-    // right: -3%;
+    right: -35px;
     display: flex;
     justify-content: space-between;
     width: 11vw;
@@ -218,8 +217,7 @@
     scale: 1;
   }
   .hamburger {
-    top: 20%;
-    right: -3%;
+    top: max(23%,80px);
   }
 }
 
@@ -230,8 +228,7 @@
     transform: translateY(-40%);
   }
   .hamburger {
-    top: 18%;
-    right: -3%;
+    top: max(21%,80px);
   }
 }
 
@@ -242,8 +239,7 @@
     transform: translateY(-60%);
   }
   .hamburger {
-    top: 16%;
-    right: -3%;
+    top: max(18%,80px);
   }
 }
 
@@ -261,8 +257,7 @@
     padding-bottom: 0.5%;
   }
   .hamburger {
-    top: 14%;
-    right: -3%;
+    top: max(16%,80px);
   }
 }
 
@@ -280,8 +275,7 @@
     padding-bottom: 0.5%;
   }
   .hamburger {
-    top: 14%;
-    right: -3%;
+    top: max(14%,80px);
   }
 }
 
@@ -299,8 +293,7 @@
     padding-bottom: 8.5%;
   }
   .hamburger {
-    top: 14%;
-    right: -3%;
+    top: max(14%,80px);
   }
 }
 
@@ -318,8 +311,7 @@
     padding-bottom: 12%;
   }
   .hamburger {
-    top: 12%;
-    right: -5.5%;
+    top: max(12%,80px);
   }
 }
 
@@ -337,7 +329,6 @@
     padding-bottom: 15%;
   }
   .hamburger {
-    top: 7%;
-    right: -7%;
+    top: max(7%,80px);
   }
 }

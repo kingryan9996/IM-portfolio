@@ -80,8 +80,15 @@
               const chapterBorder = document.querySelector(".chapterBorder01")
   
               // console.log(leftSideImg.clientHeight)
-              leftSide01Div.style = `
-              height: ${leftSideImg.clientHeight * 0.9 }px`
+              
+              
+              if (matchMedia("screen and (max-width: 534px)").matches) {
+                  leftSide01Div.style = `
+                  height: ${leftSideImg.clientHeight * 1.2 }px`
+                } else {                    
+                    leftSide01Div.style = `
+                    height: ${leftSideImg.clientHeight * 0.9 }px`
+                }
   
               
               // padding-top: ${workList[0].clientHeight / 5}px;
