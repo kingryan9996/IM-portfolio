@@ -348,7 +348,7 @@
   }
 }
 
-// 모바일 320 ~ 534
+// 모바일 360 ~ 534
 @include mobile {
   .first-line {
     scale: 0.5;
@@ -362,5 +362,9 @@
     &::after {
       display: none;
     }
+  }
+  .btn-goTop {
+    scale: 2.5;
+    transform: translate(-50%,50%);
   }
 }
