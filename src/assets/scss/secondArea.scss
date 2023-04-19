@@ -441,8 +441,115 @@
   }
 }
 
-// 모바일 320 ~ 534
+// 모바일 335 ~ 534
 @include mobile {
+  .second-area-wrap {
+    display: block;
+    .second-left {
+      width: 100%;
+      position: static;
+      display: flex;
+      .section-01 {
+        position: absolute;
+        top: 5%;
+        left: 7.5%;        
+      }
+      .my-photo {
+        width: 20%;
+      }
+      .photo-right {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        width: 80%;
+        padding-left: 2%;
+        text-align: left;
+        ul {
+          li {
+            &:nth-child(n+1) {
+              display: none;
+            }
+            p {
+              white-space: nowrap;
+              line-height: 1.6;
+            }
+          }
+        }
+        p {
+          font-size: 2.75vw;
+          position: relative;
+          strong {
+            font-size: 3vw;
+            font-weight: 500;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+    .second-right {
+      padding-left: 10%;
+      width: 100%;
+      transform: translateY(0);
+      .about-intro {
+        .intro-first {
+          display: none;
+          margin-bottom: 4vw;
+          p {
+          font-size: 2.8vw;
+          // line-height: 3.2vw;
+          white-space: nowrap;
+          }
+          img {
+            display: none;
+          }
+        }
+        .intro-main {
+          // line-height: 2.8vw;
+          opacity: 0.7;
+        }
+      }
+      .about-skill {
+        .second-right-items {
+          display: flex;
+          li {
+            &:hover::before {
+              display: block;
+            }
+            &:hover::after {
+              display: block;
+            }
+            figure {
+              img {
+                width: 4vw;
+              }
+              figcaption {
+                display: none;
+              }
+            }
+          }
+        }
+        .second-right-used {
+          li {
+            &::before {
+              border: 0.5vw;
+              //   transform: translateY(110%);
+              padding-bottom: 2%;
+              scale: 1.9;
+            }
+            img {
+              width: 4vw;
+              height: 4vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 모바일 0 ~ 335
+@include mobileSmall {
   .second-area-wrap {
     display: block;
     .second-left {

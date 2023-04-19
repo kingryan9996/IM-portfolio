@@ -1,5 +1,14 @@
 @import "./variable";
 
+
+// 모바일 : 최소 '모바일'사이즈부터 ~ 최대 '모바일에서 태블릿'사이즈까지
+@mixin mobileSmall {
+  @media (max-width: 334px) {
+    @content;
+  }
+}
+
+
 // 모바일 : 최소 '모바일'사이즈부터 ~ 최대 '모바일에서 태블릿'사이즈까지
 @mixin mobile {
   @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tabletToMobile - 1px}) {

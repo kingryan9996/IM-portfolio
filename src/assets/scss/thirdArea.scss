@@ -211,7 +211,38 @@
   }
 }
 
-// 모바일 320 ~ 534
+// 모바일 335 ~ 534
+@include mobile {
+  .third-area-wrap{
+    display: block;
+    .third-left {
+      position: absolute;
+      z-index: 0;
+      .section-02 {
+        transform: translateY(-35%);
+      }
+      .work-description {
+        display: none;
+      }
+    }
+    .third-right {
+      width: 100%;
+      padding-left: 10%;
+      .third-right-items {
+        transform: translateY(0);
+        li {
+          position: static;
+          .mobile-description {
+            display: block;
+            height: 130px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 모바일 0 ~ 334
 @include mobile {
   .third-area-wrap{
     display: block;

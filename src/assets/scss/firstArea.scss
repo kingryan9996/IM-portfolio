@@ -422,7 +422,7 @@
   .first-area-wrap {
     height: 350px;
     h1 {
-      scale: 0.5;
+      scale: 0.45;
       transform: translateY(10%);
     }
     .sns-line {
@@ -436,7 +436,7 @@
   }
 }
 
-// 모바일 320 ~ 534
+// 모바일 335 ~ 534
 @include mobile {
   .first-area-wrap {
     height: 290px;
@@ -451,6 +451,25 @@
     }
     .canvas > canvas {
       transform: scaleY(0.5) translateY(50%);
+    }
+  }
+}
+
+// 0 ~ 335
+@include mobileSmall {
+  .first-area-wrap {
+    height: 230px;
+    h1 {
+      scale: 0.23;
+      transform: translateY(10%);
+    }
+    .sns-line {
+      scale: 0.4;
+      left: -11%;
+      bottom: 1%;
+    }
+    .canvas > canvas {
+      transform: scaleY(0.45) translateY(60%);
     }
   }
 }
