@@ -167,7 +167,7 @@ export default {
             leftSide02Div.style = `
             height: ${workList[0].clientHeight}px;
             padding-top: ${workList[0].clientHeight / 5}px;
-            margin-bottom: ${workList[0].clientHeight * 0.41}px`;
+            margin-bottom: ${workList[0].clientHeight * 0.1}px`;
 
             console.log(this.$refs.workDescription)
             this.$refs.workDescription.style["height"] = `${workList[0].clientHeight}px`
