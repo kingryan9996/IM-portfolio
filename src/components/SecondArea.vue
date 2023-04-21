@@ -97,13 +97,13 @@
               
                 if (matchMedia("screen and (max-width: 334px)").matches) {
                     leftSide01Div.style = `
-                height: ${leftSideImg.clientHeight * 3 }px`
+                height: ${leftSideImg.clientHeight * 1.7 }px`
                 } else if (matchMedia("screen and (max-width: 390px)").matches) {
                 leftSide01Div.style = `
-                height: ${leftSideImg.clientHeight * 2.5 }px`
+                height: ${leftSideImg.clientHeight * 1.5 }px`
                 } else if (matchMedia("screen and (max-width: 534px)").matches) {
                 leftSide01Div.style = `
-                height: ${leftSideImg.clientHeight * 2.2 }px`
+                height: ${leftSideImg.clientHeight * 1.3 }px`
                 } else {                    
                     leftSide01Div.style = `
                     height: ${leftSideImg.clientHeight * 0.9 }px`
@@ -115,7 +115,7 @@
               chapterBorder.style = `
               position: absolute;
               border-top: 1px solid #000;
-              width: ${leftSideImg==true?(leftSideImg.clientHeight / 2.2):120}px;
+              width: ${leftSideImg==true?(leftSideImg.clientHeight / 2.2):(leftSideImg.clientHeight / 1.5)}px;
               top: 50%;
               left: 110%;
               transform: translateY(-50%);`

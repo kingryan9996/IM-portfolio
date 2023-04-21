@@ -283,6 +283,10 @@
       padding-bottom: 0.5%;
     }
   }
+  .btn-goTop {
+    scale: 1;
+    margin-right: 1vw;
+  }
 }
 
 // 태블릿에서 노트북 960 ~ 1023
@@ -303,6 +307,10 @@
       scale: 0.95;
       padding-bottom: 0.5%;
     }
+  }
+  .btn-goTop {
+    scale: 1.5;
+    margin-right: 1.5vw;
   }
 }
 
@@ -325,6 +333,10 @@
       padding-bottom: 0.5%;
     }
   }
+  .btn-goTop {
+    scale: 2;
+    margin-right: 2vw;
+  }
 }
 
 // 모바일에서 태블릿 535 ~ 719
@@ -346,6 +358,10 @@
       padding-bottom: 12%;
     }
   }
+  .btn-goTop {
+    scale: 2.5;
+    margin-right: 3vw;
+  }
 }
 
 // 모바일 320 ~ 534
@@ -365,7 +381,7 @@
   }
   .btn-goTop {
     scale: 2.5;
-    transform: translate(-50%,50%);
+    margin-right: 3vw;
   }
 }
 
@@ -386,7 +402,7 @@
   }
   .btn-goTop {
     scale: 2.5;
-    transform: translate(-50%,50%);
+    margin-right: 3vw;
   }
 }
 

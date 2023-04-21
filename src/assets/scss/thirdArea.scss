@@ -14,7 +14,7 @@
     position: sticky;
     top: 10%;
     .section-02 {
-      height: 80%;
+      height: 100%;
       position: absolute;
       top: 18%;
       left: -10%;
@@ -84,29 +84,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    // .section-02 {
-    //   position: absolute;
-    //   top: 9%;
-    //   left: -10%;
-    //   display: none;
-    //   flex-direction: column;
-    //   justify-content: space-between;
-    //   align-content: center;
-    //   .section-number {
-    //     font-size: 4vw;
-    //     font-weight: 700;
-    //     position: static;
-    //     background-color: #000;
-    //     z-index: 1;
-    //   }
-    //   .section-title {
-    //     position: relative;
-    //     transform: rotateZ(270deg);
-    //     font-size: 1.6vw;
-    //     font-weight: 400;
-    //   }
-    // }
+    align-items: center;    
     .third-right-items {
       width: 100%;
       transform: translateY(-3%);
@@ -122,6 +100,52 @@
         }
         .mobile-description {
           display: none;
+          // width: 100%;
+          // padding: 2vw 2vw 0 0;
+          // flex-direction: column;
+          // justify-content: space-between;
+          // text-align: left;
+          h3 {
+            font-size: 6vw;
+          }
+          p {
+            margin-top: 1.7vw;
+            font-size: 3.5vw;
+          }
+          .link-wrap {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transform: translateY(-1.5vw);
+            a {
+              display: flex;
+              align-items: center;
+              color: #fff;
+              &:hover svg {
+                fill: #000;
+                stroke: #fff;
+              }
+              &:hover svg > g > path {
+                fill: #fff;
+                stroke: #000;
+              }
+              &:hover svg > g > path:nth-child(1) {
+                stroke: #000;
+                stroke-width: 0.01;
+              }
+              svg {
+                width: 8vw;
+              }
+              span {
+                padding-left: 0.5vw;
+              }
+            }
+            .work-link {
+              svg {
+                scale: 1.7;
+              }
+            }
+          }          
         }
       }
     }
@@ -157,6 +181,7 @@
       position: absolute;
       z-index: 0;
       .section-02 {
+        height: 80%;
         transform: translateY(-30%);
       }
       .work-description {
@@ -165,14 +190,21 @@
     }
     .third-right {
       width: 100%;
-      padding-left: 10%;      
+      padding-left: 10%;
       .third-right-items {
         transform: translateY(0);
         li {
           position: static;
           .mobile-description {
             display: block;
-            height: 200px;
+            .link-wrap {
+              margin-top: 1.5vw;
+              a {
+                svg {
+                  width: 5vw;
+                }
+              }
+            }
           }
         }
       }
@@ -188,6 +220,7 @@
       position: absolute;
       z-index: 0;
       .section-02 {
+        height: 80%;
         transform: translateY(-30%);
       }
       .work-description {
@@ -203,7 +236,14 @@
           position: static;
           .mobile-description {
             display: block;
-            height: 165px;
+            .link-wrap {
+              margin-top: 1.5vw;
+              a {
+                svg {
+                  width: 5vw;
+                }
+              }
+            }
           }
         }
       }
@@ -219,6 +259,7 @@
       position: absolute;
       z-index: 0;
       .section-02 {
+        height: 80%;
         transform: translateY(-35%);
       }
       .work-description {
@@ -234,7 +275,20 @@
           position: static;
           .mobile-description {
             display: block;
-            height: 130px;
+            .link-wrap {
+              margin-top: 1vw;
+              a {
+                svg {
+                  width: 6vw;
+                }
+              }
+            }
+            .work-link {
+              span {
+                scale: 0.95;
+                transform: translateY(0.5vw);
+              }
+            }
           }
         }
       }
@@ -246,6 +300,7 @@
 @include mobileSmall {
   .third-area-wrap{
     display: block;
+    padding-bottom: 0;
     .third-left {
       position: absolute;
       z-index: 0;
@@ -266,7 +321,19 @@
           position: static;
           .mobile-description {
             display: block;
-            height: 130px;
+            .link-wrap {
+              a {
+                svg {
+                  width: 8vw;
+                }
+              }
+            }
+            .work-link {
+              span {
+                scale: 0.95;
+                transform: translateY(0.5vw);
+              }
+            }
           }
         }
       }
