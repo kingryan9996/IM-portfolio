@@ -92,6 +92,7 @@
         <ul>            
             <li><span>Address : 서울시 관악구</span></li>
             <li><span><a href="mailto:kingryan9996@gmail.com">Email : kingryan9996@gmail.com</a></span></li>
+            <li><span><a href="https://docs.google.com/document/d/1nVhil8JEsJZfLaTdyanIcnJLK53OZaHZ/edit?usp=share_link&ouid=114322736588151565489&rtpof=true&sd=true" target="_blank">이력서 : 지원자(임승환)</a></span></li>
             <!-- <li><span><a href='tel:010-9996-5765'>Phone : 010-9996-5765</a></span></li> -->
             <li class="sns-link">
               <span>
