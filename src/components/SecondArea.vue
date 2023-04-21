@@ -79,13 +79,7 @@
               ]
           }
       },
-      mounted() {
-
-        console.log(this.usedList)
-        console.log(this.usedList[0])
-        console.log(this.usedList[1])
-        // this.usedList.push()
-        
+      mounted() {        
   
           const getSec02Height = () => {
   

@@ -28,14 +28,6 @@ export default {
         const thirdSec = document.querySelector(".third-area-wrap")
         const secondSec = document.querySelector(".second-area-wrap")
         const logoEl = this.$refs.navLogo
-        console.log(logoEl,'???')
-        
-        // console.log(firstSec.clientHeight,'?????')
-        // console.log(firstSec.offsetTop,'?????')
-        // console.log(secondSec.clientHeight,'?????')
-        // console.log(secondSec.offsetTop,'?????')
-        // console.log(thirdSec.clientHeight,'?????')
-        // console.log(thirdSec.offsetTop,'?????')
 
                 document.addEventListener('scroll',()=>{
                     logoClassFn();
@@ -54,7 +46,7 @@ export default {
         )
 
         const logoClassFn = () => {
-            console.log(( firstSec.clientHeight / 18 ))
+            // console.log(( firstSec.clientHeight / 18 ))
             let logoVisTunning = ( firstSec.clientHeight / 18 )
             if ( firstSec.offsetTop >= 0 && window.pageYOffset < firstSec.clientHeight - logoVisTunning && logoEl.className != "blueW" ){
                 logoEl.className = "blueW"
@@ -100,7 +92,6 @@ export default {
     methods: {
         
          secNavigator: function (index) {
-
             const allArticle = document.querySelectorAll("article")
             const secThree = [];
             allArticle.forEach((obj,index)=>{
@@ -122,8 +113,6 @@ export default {
                 behavior: 'smooth'
             });
         }
-
-
     },
 }
 </script>
